@@ -1,0 +1,34 @@
+#form {
+    margin: 10rem 10rem 0rem 10rem auto;
+    font-size: 1.4rem;
+}
+
+#form .donor p{
+    /* margin: 10rem 10rem 0rem 10rem auto; */
+    font-size: 1rem;
+}
+
+#form button, #form input {
+    padding: .6rem;
+    font-size: 1.5rem;
+}
+
+hr {
+    size: 5
+}
+
+.afric-title-wrapper {
+    color: green;
+    margin-top: 20px;
+
+}
+
+.afric-title-wrapper .title {
+    font-weight: 700
+}
+
+.amount button {
+    border: 2px solid grey;
+    padding: .5rem;
+    background: white
+}

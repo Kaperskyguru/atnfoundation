@@ -1,0 +1,39 @@
+.single-partner {
+    /* width: 20%; */
+    background: #fff;
+    height: 240px;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+    border: #ddd solid 1px;
+    margin-left: -1px;
+    margin-top: -1px;
+    font-size: 15px;
+}
+
+
+.partner-logo {
+    width: 100%;
+    height: 100%;
+    float: left;
+    padding: 20px;
+}
+
+.display-table {
+    height: 100%;
+    display: table;
+    width: 100%;
+}
+
+.vertical-align {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    max-width: 216px;
+    max-height: 140px;
+}
+
+.partner-logo a h5 {
+    padding-top: 20px;
+}
