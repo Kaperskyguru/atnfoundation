@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ATN Foundation</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/donation.css">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -108,92 +107,190 @@
         </section>
         <br />
         <br />
+
+        <style>
+            .accordion,
+            .card {
+                border: 0px
+            }
+
+            .accordion button {
+                /* font-size: 1rem; */
+                color: #c74000;
+                text-decoration: none;
+            }
+
+            .accordion button.btn-link {
+                /* font-size: 1rem; */
+                /* color: #c74000; */
+                color: #c74000;
+                text-decoration: none;
+            }
+
+            .accordion button {
+                font-family: Chewy, sans-serif;
+                font-size: 1.4rem;
+                color: #c74000;
+            }
+
+            .accordion h2 {
+
+                margin-top: 0;
+            }
+
+            .accordion .card-header {
+                padding: 20px;
+                margin-top: 20px;
+                position: relative;
+                background-color: #f3f3f3;
+                border: 0;
+            }
+
+            .accordion .card-body {
+                margin: 0 0 1rem 0;
+                font-size: 16px;
+            }
+
+            .accordion .card-header:after {
+                font-family: 'FontAwesome';
+                line-height: 23px;
+                display: block;
+                content: "\f106";
+                float: right;
+                position: absolute;
+                background-color: #ff671f;
+                color: #fff;
+                top: 20px;
+                opacity: 1;
+                overflow: hidden;
+                text-align: center;
+                right: 20px;
+                border-radius: 50% 50% 50% 50%;
+                width: 23px;
+                height: 23px;
+                float: right;
+                padding-top: 0;
+            }
+
+            .accordion .card-header.collapsed:after {
+                /* symbol for "collapsed" panels */
+                content: '\f107';
+
+            }
+        </style>
+
         <section class="container-fluid">
             <div class="container m-5">
                 <h2>FAQ'S</h2>
                 <div class="row">
-                    <div class="col-md-7">
-                        <div class="accordion" style="font-size:20px; text-align: justify;" id="accordionExample">
+                    <div class="col-md-12">
+                        <div class="accordion" style="text-align: justify;" id="accordionExample">
                             <div class="card">
-                                <div class="card-header" id="headingOne">
+
+                                <div class="card-header" data-toggle="collapse" href="#collapseOne"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                                    id="headingOne">
+
                                     <h2 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse"
-                                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            WHAT IS AFRITECHNOVATIVE FOUNDATION ABOUT?
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseOne" aria-expanded="false"
+                                            aria-controls="collapseOne">
+                                            <span>WHAT IS AFRITECHNOVATIVE FOUNDATION ABOUT?</span>
                                         </button>
                                     </h2>
+
                                 </div>
 
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                                     data-parent="#accordionExample">
                                     <div class="card-body">
-                                        AfriTechNovative is a term coined from three words, Africa, technology and
-                                        innovation.
-                                        The foundation is aimed at developing and improving technology in Africa by
-                                        timely
-                                        creating a tech-friendly environment for primary and secondary school students
-                                        and
-                                        arming them with the necessary knowledge and skill-set required to compete
-                                        favourably in
-                                        an ever-evolving environment.
+                                        <p class="mt-4">
+                                            AfriTechNovative is a term coined from three words, Africa, technology and
+                                            innovation.
+                                            The foundation is aimed at developing and improving technology in Africa by
+                                            timely
+                                            creating a tech-friendly environment for primary and secondary school
+                                            students
+                                            and
+                                            arming them with the necessary knowledge and skill-set required to compete
+                                            favourably in
+                                            an ever-evolving environment.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card-header" id="headingTwo">
+                                <div class="card-header collapsed" data-toggle="collapse" href="#collapseTwo"
+                                    data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"
+                                    id="headingTwo">
+
                                     <h2 class="mb-0">
                                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                             data-target="#collapseTwo" aria-expanded="false"
                                             aria-controls="collapseTwo">
-                                            WHAT IS AN NGO?
+                                            <span>WHAT IS AN NGO?</span>
                                         </button>
                                     </h2>
+
                                 </div>
                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                                     data-parent="#accordionExample">
                                     <div class="card-body">
-                                        NGO means non-governmental organization. It is also a non-profit organization
-                                        working
-                                        with or without government efforts to provide social and economic services for
-                                        humanity.
+                                        <p class="mt-4">
+                                            NGO means non-governmental organization. It is also a non-profit
+                                            organization
+                                            working
+                                            with or without government efforts to provide social and economic services
+                                            for
+                                            humanity.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card-header" id="headingThree">
+                                <div class="card-header collapsed" data-toggle="collapse" href="#collapseThree"
+                                    data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"
+                                    id="headingThree">
                                     <h2 class="mb-0">
                                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                             data-target="#collapseThree" aria-expanded="false"
                                             aria-controls="collapseThree">
-                                            HOW DO YOU RAISE FUNDS?
+                                            <span>HOW DO YOU RAISE FUNDS?</span>
                                         </button>
                                     </h2>
                                 </div>
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                                     data-parent="#accordionExample">
                                     <div class="card-body">
-                                        We are founded through donations from individuals, groups, companies, private
-                                        organizations and government establishments.
+                                        <p class="mt-4">
+                                            We are founded through donations from individuals, groups, companies,
+                                            private
+                                            organizations and government establishments.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
 
 
                             <div class="card">
-                                <div class="card-header" id="headingFour">
+                                <div class="card-header collapsed" data-toggle="collapse" href="#collapseFour"
+                                    data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"
+                                    id="headingThree">
                                     <h2 class="mb-0">
                                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                             data-target="#collapseFour" aria-expanded="false"
                                             aria-controls="collapseFour">
-                                            ARE YOU AFFILIATED WITH THE GOVERNMENT?
+                                            <span>ARE YOU AFFILIATED WITH THE GOVERNMENT?</span>
                                         </button>
                                     </h2>
                                 </div>
                                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                                     data-parent="#accordionExample">
                                     <div class="card-body">
-                                        No. But we look forward to partnering with the government and other private
-                                        organizations in other to achieve a common good for humanity.
+                                        <p class="mt-4">
+                                            No. But we look forward to partnering with the government and other private
+                                            organizations in other to achieve a common good for humanity.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -201,36 +298,47 @@
 
 
                             <div class="card">
-                                <div class="card-header" id="headingFive">
+                                <div class="card-header collapsed" data-toggle="collapse" href="#collapseFive"
+                                    data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive"
+                                    id="headingFive">
                                     <h2 class="mb-0">
                                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                             data-target="#collapseFive" aria-expanded="false"
                                             aria-controls="collapseFive">
-                                            WHAT IS THE NGO “HALO EFFECT”?
+                                            <span> WHAT IS THE NGO “HALO EFFECT”?</span>
                                         </button>
                                     </h2>
                                 </div>
                                 <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
                                     data-parent="#accordionExample">
                                     <div class="card-body">
-                                        The halo effect is a term in psychology that describes a tendency to favourably
-                                        judge
-                                        people, companies, groups, products etc, based on their perceived image of
-                                        morality or
-                                        some other positive factor.
-                                        In the context of NGOs, groups that claim to promote values seen as universally
-                                        good
-                                        -peace, human rights, justice, coexistence- are automatically seen as credible
-                                        and
-                                        constructive forces immune from investigations and criticism.
-                                        This cognitive bias is seen in the way in which factual and legal statement by
-                                        politicized NGOs that claim to represent human rights are routinely accepted at
-                                        face
-                                        value and without further questions by journalists, diplomats and other opinion
-                                        leaders.
-                                        This effect shields NGO’s from the independent analysis and scrutiny that are
-                                        directed
-                                        toward other political actors
+                                        <p class="mt-4">
+                                            The halo effect is a term in psychology that describes a tendency to
+                                            favourably
+                                            judge
+                                            people, companies, groups, products etc, based on their perceived image of
+                                            morality or
+                                            some other positive factor.
+                                            In the context of NGOs, groups that claim to promote values seen as
+                                            universally
+                                            good
+                                            -peace, human rights, justice, coexistence- are automatically seen as
+                                            credible
+                                            and
+                                            constructive forces immune from investigations and criticism.
+                                            This cognitive bias is seen in the way in which factual and legal statement
+                                            by
+                                            politicized NGOs that claim to represent human rights are routinely accepted
+                                            at
+                                            face
+                                            value and without further questions by journalists, diplomats and other
+                                            opinion
+                                            leaders.
+                                            This effect shields NGO’s from the independent analysis and scrutiny that
+                                            are
+                                            directed
+                                            toward other political actors
+                                        </p>
 
                                     </div>
                                 </div>
@@ -238,184 +346,113 @@
                         </div>
 
                     </div>
-
-                    <div class=" col-md-5 mb-5">
-                        <div style="background: #f6f7f9;
-                    padding: 20px 30px;
-                    font-weight: normal;
-                    color: #36434b;
-                    border-bottom: #d4d2d2 solid 1px;">Still have more questions?</div>
-                        <div style="background:#fff">
-                            <div class="sidenews" style="border-bottom: #e2e8eb solid 1px;
-                    margin-bottom: 10px;
-                    padding: 15px 30px;">
-                                <!-- <h4 class="text-center" style="font-weight:bold; font-size: 1.9rem">Say Hello</h4> -->
-                                <p class="mb-5 ">
-                                    <ul class="f-address">
-                                        <li>
-                                            <div class="row">
-                                                <div class="col-1"><i class="fas fa-map-marker"></i></div>
-                                                <div class="col-10">
-                                                    <h6 class="font-weight-bold mb-0">Address:</h6>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="row">
-                                                <div class="col-1"><i class="far fa-envelope"></i></div>
-                                                <div class="col-10">
-                                                    <h6 class="font-weight-bold mb-0">Have any questions?</h6>
-                                                    <p><a style="color:#000" href="#">Support@atnfoundation.org</a></p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="row">
-                                                <div class="col-1"><i class="fas fa-phone-volume"></i></div>
-                                                <div class="col-10">
-                                                    <h6 class="font-weight-bold mb-0">Telephone:</h6>
-                                                    <p><a href="#" style="color:#000">+234 (0) 81 45655 380</a></p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
+
 
 
         <!-- Footer -->
-        <footer class="pt-5 pb-4" id="contact">
+        <footer class="pt-5 pb-4 container-fluid" id="contact" style="background:#f7f7f7">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-                        <h5 class="mb-4 font-weight-bold">ABOUT US</h5>
-                        <p class="mb-4">Etiam laoreet in ex quis efficitur.</p>
-                        <ul class="f-address">
-                            <li>
-                                <div class="row">
-                                    <div class="col-1"><i class="fas fa-map-marker"></i></div>
-                                    <div class="col-10">
-                                        <h6 class="font-weight-bold mb-0">Address:</h6>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-1"><i class="far fa-envelope"></i></div>
-                                    <div class="col-10">
-                                        <h6 class="font-weight-bold mb-0">Have any questions?</h6>
-                                        <p><a href="#">Support@atnfoundation.org</a></p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-1"><i class="fas fa-phone-volume"></i></div>
-                                    <div class="col-10">
-                                        <h6 class="font-weight-bold mb-0">Telephone:</h6>
-                                        <p><a href="#">+234 (0) 81 45655 380</a></p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-                        <h5 class="mb-4 font-weight-bold">LATEST UPDATES</h5>
-                        <ul class="recent-post">
-                            <li>
-                                <label class="mr-3">28 <br><span>APR</span></label>
-                                <span>Rendomised words which dont look eveable.</span>
-                            </li>
-                            <li>
-                                <label class="mr-3">29 <br><span>APR</span></label>
-                                <span>Rendomised words which dont look eveable.</span>
-                            </li>
-                            <li>
-                                <label class="mr-3">30 <br><span>APR</span></label>
-                                <span>Rendomised words which dont look eveable.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-                        <h5 class="mb-4 font-weight-bold">OUR PROGRAMS</h5>
-                        <ul class="f-address">
-                            <li>
-                                <div class="row">
-                                    <!-- <div class="col-1"><i class="fab fa-home"></i></div> -->
-                                    <div class="col">
-                                        <p class="mb-0"><a href="#">AfriTeenCoder </a> <br> <em>Lorem ipsum dolor sit
-                                                amet consectetur adipisicing elit.</em></p>
-                                        <label></label>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <!-- <div class="col-1"><i class="fab fa-twitter"></i></div> -->
-                                    <div class="col">
-                                        <p class="mb-0"><a href="#">AfriTeenCoder </a> <br> <em>Lorem ipsum dolor sit
-                                                amet consectetur adipisicing elit.</em></p>
-                                        <label></label>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <!-- <div class="col-1"><i class="fab fa-twitter"></i></div> -->
-                                    <div class="col">
-                                        <p class="mb-0"><a href="#">AfriTeenCoder </a> <br> <em>Lorem ipsum dolor sit
-                                                amet consectetur adipisicing elit.</em></p>
-                                        <label></label>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-                        <h5 class="mb-4 font-weight-bold">CONNECT WITH US</h5>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Your Email Address" />
-                            <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>
-                        </div>
-                        <ul class="social-pet mt-4">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <h5 class="mb-5 font-weight-bold">CONNECT WITH US</h5>
+                        <ul class="social-row">
                             <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#" title="youtube"><i class="fab fa-youtube"></i></a></li>
                             <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                        <p>Call: <span>+2348145655380</span> </p>
+                        <p>Email: <span>solomoneseme@gmail.com</span> </p>
+
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <h5 class="mb-5 font-weight-bold">ABOUT</h5>
+                        <ul class="recent-post">
+                            <li>
+                                <span>Mission &amp; Vision</span>
+                            </li>
+                            <li>
+                                <span>Partners</span>
+                            </li>
+                            <li>
+                                <span>Mentors</span>
+                            </li>
+                            <li>
+                                <span>Contact Us</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <h5 class="mb-5 font-weight-bold">OUR PROGRAMS</h5>
+                        <ul class="recent-post">
+                            <li>
+                                <span>Mission &amp; Vision</span>
+                            </li>
+                            <li>
+                                <span>Partners</span>
+                            </li>
+                            <li>
+                                <span>Mentors</span>
+                            </li>
+                            <li>
+                                <span>Contact Us</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <h5 class="mb-5 font-weight-bold">CONNECT WITH US</h5>
+                        <ul class="recent-post">
+                            <li>
+                                <span>Mission &amp; Vision</span>
+                            </li>
+                            <li>
+                                <span>Partners</span>
+                            </li>
+                            <li>
+                                <span>Mentors</span>
+                            </li>
+                            <li>
+                                <span>Contact Us</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- Copyright -->
-        <section class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 ">
-                        <div class="text-center text-white">
-                            &copy; 2019 ATN Foundation. All Rights Reserved.
+
+            <!-- Copyright -->
+            <section class="copyright m-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="text-muted">
+                                &copy; 2019 ATN Foundation. All Rights Reserved.
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-left">
+                            <div class="text-muted copyright">
+                                <div>
+                                    <a href="#">Terms &amp; Condition</a>
+                                    <a href="#">Terms &amp; Condition</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </footer>
 
     </main>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
-    <!-- <script src="js/jquery.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+            </script> -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
     <!-- <script src="js/bootstrap.min.js"></script> -->
     <script src="js/main.js"></script>
 </body>

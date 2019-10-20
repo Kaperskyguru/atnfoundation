@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ATN Foundation</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/donation.css">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -16,7 +15,7 @@
 </head>
 
 <body>
-    <main style="background:#f7f7f7">
+    <main >
         <section id="header">
             <!-- NAV -->
             <nav class="navbar navbar-b navbar-expand-md nav-block fixed-top bg-light navbar-light navbar-tans ">
@@ -110,7 +109,8 @@
         <section class="container-fluid" style="background: #f2f2f2; font-size: 1.4rem;">
             <div class="container ">
                 <h1 style="
-                color: #333;
+                color: #ff671f;
+                font-family: chewy, sans-serif;
                 font-size: 2.400em;
                 text-align:left;
                 margin-bottom:15px;
@@ -124,6 +124,8 @@
                     <div class="col-md-7 mb-5" style="background:#fff">
                         <div class="m-4">
                             <h3 style="
+                                            color: #ff671f;
+                font-family: chewy, sans-serif;
                             font-weight: bold;
                             font-size: 2.6rem;
                             margin-bottom: 10px;
@@ -132,21 +134,21 @@
                             <form action="#" method="post">
                                 <div class="form-group">
                                     <input type="text" placeholder="Enter your name" name="name" id="name"
-                                        style="border: #d4d2d2 solid 1px; padding: 12px 20px; width:100%" />
+                                        style="padding: 12px 20px; width:100%" />
                                     <div class="errorMessage"
                                         style="color: red; font-size: 0.83em; display: block; margin-top: 5px; visibility: hidden"
                                         id="ContactUs_name_em_">Name cannot be blank.</div>
                                 </div>
                                 <div class="form-group">
                                     <input type="email" placeholder="Enter your email" name="email" id="email"
-                                        style="border: #d4d2d2 solid 1px; padding: 12px 20px; width: 100%" />
+                                        style="padding: 12px 20px; width: 100%" />
                                     <div class="errorMessage"
                                         style="color: red; font-size: 0.83em; display: block; margin-top: 5px; visibility: hidden"
                                         id="ContactUs_email_em_">Email cannot be blank.</div>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" placeholder="Enter your subject" name="subject" id="subject"
-                                        style="border: #d4d2d2 solid 1px; padding: 12px 20px; width:100%" />
+                                        style="padding: 12px 20px; width:100%" />
                                     <div class="errorMessage"
                                         style="color: red; font-size: 0.83em; display: block; margin-top: 5px; visibility: hidden"
                                         id="ContactUs_name_em_">Subject cannot be blank.</div>
@@ -154,14 +156,13 @@
 
                                 <div class="form-group">
                                     <textarea placeholder="Message" name="ContactUs[message]" id="ContactUs_message"
-                                        style="border: #d4d2d2 solid 1px; padding: 12px 20px; width:100%; height: 200px; resize: none;"></textarea>
+                                        style="padding: 12px 20px; width:100%; height: 200px; resize: none;"></textarea>
 
                                     <div class="errorMessage" id="ContactUs_message_em_" style="display:none"></div>
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="submit" name="" id="" style="border: none;
-                                    background: #1da68b;
+                                    <input type="submit" class="donate-btn" name="" id="" style="border: none;
                                     color: #fff;
                                     padding: 9px 20px;
                                     font-size: 0.85em;
@@ -174,6 +175,8 @@
                         <div style="background: #f6f7f9;
                         padding: 20px 30px;
                         font-weight: normal;
+                        color: #ff671f !important;
+                        font-family: chewy, sans-serif;
                         color: #36434b;
                         border-bottom: #d4d2d2 solid 1px;">Address Information</div>
                         <div style="background:#fff">
@@ -182,7 +185,7 @@
                         padding: 15px 30px;">
                                 <!-- <h4 class="text-center" style="font-weight:bold; font-size: 1.9rem">Say Hello</h4> -->
                                 <p class="mb-5 ">
-                                    <ul class="f-address">
+                                    <ul class="f-address" style="list-style: none;">
                                         <li>
                                             <div class="row">
                                                 <div class="col-1"><i class="fas fa-map-marker"></i></div>
@@ -247,132 +250,106 @@
 
         <br>
         <!-- Footer -->
-        <footer class="pt-5 pb-4" id="contact">
+        <footer class="pt-5 pb-4 container-fluid" id="contact">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-                        <h5 class="mb-4 font-weight-bold">ABOUT US</h5>
-                        <p class="mb-4">Etiam laoreet in ex quis efficitur.</p>
-                        <ul class="f-address">
-                            <li>
-                                <div class="row">
-                                    <div class="col-1"><i class="fas fa-map-marker"></i></div>
-                                    <div class="col-10">
-                                        <h6 class="font-weight-bold mb-0">Address:</h6>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-1"><i class="far fa-envelope"></i></div>
-                                    <div class="col-10">
-                                        <h6 class="font-weight-bold mb-0">Have any questions?</h6>
-                                        <p><a href="#">Support@atnfoundation.org</a></p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-1"><i class="fas fa-phone-volume"></i></div>
-                                    <div class="col-10">
-                                        <h6 class="font-weight-bold mb-0">Telephone:</h6>
-                                        <p><a href="#">+234 (0) 81 45655 380</a></p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-                        <h5 class="mb-4 font-weight-bold">LATEST UPDATES</h5>
-                        <ul class="recent-post">
-                            <li>
-                                <label class="mr-3">28 <br><span>APR</span></label>
-                                <span>Rendomised words which dont look eveable.</span>
-                            </li>
-                            <li>
-                                <label class="mr-3">29 <br><span>APR</span></label>
-                                <span>Rendomised words which dont look eveable.</span>
-                            </li>
-                            <li>
-                                <label class="mr-3">30 <br><span>APR</span></label>
-                                <span>Rendomised words which dont look eveable.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-                        <h5 class="mb-4 font-weight-bold">OUR PROGRAMS</h5>
-                        <ul class="f-address">
-                            <li>
-                                <div class="row">
-                                    <!-- <div class="col-1"><i class="fab fa-home"></i></div> -->
-                                    <div class="col">
-                                        <p class="mb-0"><a href="#">AfriTeenCoder </a> <br> <em>Lorem ipsum dolor sit
-                                                amet consectetur adipisicing elit.</em></p>
-                                        <label></label>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <!-- <div class="col-1"><i class="fab fa-twitter"></i></div> -->
-                                    <div class="col">
-                                        <p class="mb-0"><a href="#">AfriTeenCoder </a> <br> <em>Lorem ipsum dolor sit
-                                                amet consectetur adipisicing elit.</em></p>
-                                        <label></label>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <!-- <div class="col-1"><i class="fab fa-twitter"></i></div> -->
-                                    <div class="col">
-                                        <p class="mb-0"><a href="#">AfriTeenCoder </a> <br> <em>Lorem ipsum dolor sit
-                                                amet consectetur adipisicing elit.</em></p>
-                                        <label></label>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-                        <h5 class="mb-4 font-weight-bold">CONNECT WITH US</h5>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Your Email Address" />
-                            <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>
-                        </div>
-                        <ul class="social-pet mt-4">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <h5 class="mb-5 font-weight-bold">CONNECT WITH US</h5>
+                        <ul class="social-row">
                             <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#" title="youtube"><i class="fab fa-youtube"></i></a></li>
                             <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                        <p>Call: <span>+2348145655380</span> </p>
+                        <p>Email: <span>solomoneseme@gmail.com</span> </p>
+
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <h5 class="mb-5 font-weight-bold">ABOUT</h5>
+                        <ul class="recent-post">
+                            <li>
+                                <span>Mission &amp; Vision</span>
+                            </li>
+                            <li>
+                                <span>Partners</span>
+                            </li>
+                            <li>
+                                <span>Mentors</span>
+                            </li>
+                            <li>
+                                <span>Contact Us</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <h5 class="mb-5 font-weight-bold">OUR PROGRAMS</h5>
+                        <ul class="recent-post">
+                            <li>
+                                <span>Mission &amp; Vision</span>
+                            </li>
+                            <li>
+                                <span>Partners</span>
+                            </li>
+                            <li>
+                                <span>Mentors</span>
+                            </li>
+                            <li>
+                                <span>Contact Us</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <h5 class="mb-5 font-weight-bold">CONNECT WITH US</h5>
+                        <ul class="recent-post">
+                            <li>
+                                <span>Mission &amp; Vision</span>
+                            </li>
+                            <li>
+                                <span>Partners</span>
+                            </li>
+                            <li>
+                                <span>Mentors</span>
+                            </li>
+                            <li>
+                                <span>Contact Us</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </footer>
-        <!-- Copyright -->
-        <section class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 ">
-                        <div class="text-center text-white">
-                            &copy; 2019 ATN Foundation. All Rights Reserved.
+    </main>
+    <!-- Copyright -->
+    <section class="copyright m-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="text-muted">
+                        &copy; 2019 ATN Foundation. All Rights Reserved.
+                    </div>
+                </div>
+                <div class="col-md-4 text-left">
+                    <div class="text-muted copyright">
+                        <div>
+                            <a href="#">Terms &amp; Condition</a>
+                            <a href="#">Terms &amp; Condition</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
-    <!-- <script src="js/jquery.min.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+            </script> -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
     <!-- <script src="js/bootstrap.min.js"></script> -->
     <script src="js/main.js"></script>
 </body>
