@@ -8,387 +8,11 @@
     <title>ATN Foundation</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/donation.css">
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/nav.css">
+    <link defer href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link defer href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
 
-</head>
-
-<style>
-    .form-control:focus,
-    /* button:focus, */
-    .form-control:active {
-        border-color: none;
-        border: 1px solid orange;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px orange;
-        outline: none;
-
-    }
-
-    .font body {
-        font-family: "Nunito", sans-serif !important;
-    }
-
-    input,
-    select,
-    textarea,
-    button {
-        /* border: 2px solid orange; */
-        /* outline: none; */
-        box-shadow: none !important
-    }
-
-    .top-menu .topheader {
-        max-height: 45px;
-        background: #ed5939;
-    }
-
-    .top-menu ul {
-        color: #ffffff;
-        height: 45px;
-        padding: 0 20px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-
-    .top-menu li {
-        display: inline-block;
-        text-align: left;
-        vertical-align: top;
-    }
-
-    .top-menu li a {
-
-        border-left: 0;
-        font-size: 1.5rem;
-        line-height: 45px;
-        padding: 0 10px;
-    }
-
-    .top-menu .topheader li a {
-        color: #fff;
-    }
-
-    .top-menu li.search {
-        flex: 1
-    }
-
-    .top-menu li.search form {
-        float: right;
-        display: block;
-        margin: 0;
-    }
-
-    .top-menu li.search form fieldset {
-        float: right;
-        display: block;
-        margin: 0;
-        position: relative;
-    }
-
-    .top-menu .searchLabel {
-        border: 0;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-    }
-
-    .top-menu #search {
-        font-size: 1.4rem;
-        color: #fff;
-
-    }
-
-    .top-menu form.header-search #search {
-        width: 200px;
-        margin-top: 0;
-        height: 45px;
-        vertical-align: top;
-        background-color: rgba(255, 255, 255, 0.2) !important;
-        color: #fff !important;
-        border: 0 !important;
-        border-radius: 0 !important;
-    }
-
-    .top-menu .input-group div button,
-    .top-menu .input-group div {
-        background-color: rgba(255, 255, 255, 0.2) !important;
-        color: #fff !important;
-        border: 0 !important;
-        border-radius: 0 !important;
-    }
-
-
-    .mainlogo {
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center left;
-        height: 132px;
-        float: left;
-        display: block;
-        margin-top: 20px;
-        margin: 20px 0;
-        text-indent: -999px;
-        background: no-repeat 0 0;
-        overflow: hidden;
-        -webkit-print-color-adjust: exact;
-    }
-
-    .top-menu .tagline {
-        flex: 1;
-        margin: 0;
-        margin-right: 20px;
-        font-size: 1rem;
-        color: #333f48;
-        font-weight: 700;
-        font-family: Chewy, sans-serif;
-    }
-
-
-    .top-menu .box-tagline {
-        /* margin: 20px 0 20px 20px; */
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: left;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-    }
-
-    .menu-btn {
-        color: #fff
-    }
-
-    .menu-btn button {
-        border: 0;
-        margin: 0;
-        padding: .5em 1.7em;
-        background: #ed5939;
-        color: #fff;
-        border-radius: 0
-    }
-
-    .menu-btn button:first-child {
-        margin-left: 2px;
-        margin-right: 1.5rem;
-    }
-
-    .menu-btn button:last-child {
-        background-color: #333f48;
-    }
-
-    .menu-btn span {
-        font-size: 2rem;
-        line-height: 1.5;
-        font-weight: bolder;
-    }
-
-    .menu-bar {
-        background-color: #F0F0F0;
-    }
-
-    .mainmenu {
-        background-color: #F0F0F0;
-        width: 100%;
-        float: none;
-        position: relative;
-        top: auto;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-
-
-    .mainmenu ul {
-        width: 100%;
-        max-width: 1170px;
-        padding-left: 20px;
-        padding-right: 20px;
-        margin: 0 auto;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
-
-    .mainmenu ul li>a {
-        color: #333;
-        height: auto;
-        padding: .5rem 2.1rem !important;
-        font-weight: normal;
-        word-break: normal;
-        font-size: 1.7rem;
-    }
-
-    header .mobile {
-        display: none;
-
-        /* display: -webkit-box; */
-        /* display: -ms-flexbox; */
-        /* display: flex; */
-        /* -webkit-box-align: center; */
-        /* -ms-flex-align: center; */
-        /* align-items: center; */
-
-        /* max-width: 1170px; */
-        padding-left: 20px;
-        padding-right: 20px;
-
-        /* width: 100%; */
-        /* margin: 0 auto; */
-        /* min-height: 100px; */
-    }
-
-    .mobilemenu {
-        position: none;
-        top: 100%;
-        z-index: 2;
-        -webkit-transition: all 0.4s ease-in;
-        -o-transition: all 0.4s ease-in;
-        transition: all 0.4s ease-in;
-        /* max-height: 0; */
-        overflow: hidden;
-
-        background-color: #F0F0F0;
-        float: none;
-        position: relative;
-        top: auto;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden
-    }
-
-    .collapse-active {
-        transition: cubic-bezier();
-        display: none;
-        /* overflow-y: scroll; */
-
-    }
-
-
-    @media screen and (max-width: 768px) {
-        .mobilemenu .collapse-active {
-            max-height: calc(100vh - 100px);
-            padding-bottom: 20px;
-            max-height: 55em
-        }
-
-        header .top-menu {
-            min-height: 100px;
-        }
-
-        header .menuMainAlt {
-            display: block;
-            color: #c74000;
-            background-color: transparent;
-            position: absolute;
-            float: none;
-            right: 20px;
-            text-align: center;
-            text-transform: uppercase;
-            padding: .5em 0;
-            font-weight: 700;
-        }
-
-        a.menuMainAlt:before {
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            padding: 0;
-            font-size: 2rem;
-            line-height: inherit;
-            color: #333f48;
-            display: block;
-            font-weight: 400;
-            font-family: 'FontAwesome';
-            content: '\f0c9';
-        }
-
-        a.menuMainAlt:after {
-            content: " ";
-            visibility: hidden;
-            display: block;
-            height: 0;
-            clear: both;
-        }
-
-        header .mobile {
-            display: block;
-        }
-
-        header .donate {
-            padding: .5em 1em;
-            display: block;
-            width: auto;
-            /* vertical-align: middle; */
-        }
-
-        header .main-tagline {
-            display: none;
-        }
-
-        header .topheader {
-            display: none;
-        }
-
-        header .desktop {
-            display: none;
-        }
-
-        .mobile .mainlogo {
-            margin: 10px 10px;
-            width: 80px;
-            height: 66px;
-            max-width: 100%;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center left;
-        }
-
-        .mobile .mobile-tag {
-            margin-right: 60px;
-            display: flex;
-            flex: 1;
-            align-items: center;
-            justify-content: flex-end;
-            margin: 0 80px 0 20px;
-            flex-wrap: wrap;
-            float: right;
-        }
-
-        #menu-bar {
-            display: none;
-        }
-
-        @media screen and (max-width: 320px) {
-            header .donate {
-                display: none;
-            }
-
-            .mobile .mobile-tag {
-                margin: 30px 80px 0 20px;
-                align-items: baseline;
-            }
-        }
-    }
-</style>
 </head>
 
 <body>
@@ -436,9 +60,9 @@
                             </div>
                             <div class="mobile-tag">
                                 <div class="menu-btn">
-                                    <a class="menuMainAlt" id="mobilemenubtn" href="#menu" data-toggle="collapse"
-                                        data-target="#mobilemenu" aria-controls="mobilemenu" aria-expanded="false"
-                                        aria-label="Toggle navigation">Menu</a>
+                                    <a class="menuMainAlt navbar-toggle" id="mobilemenubtn" href="#menu"
+                                        data-toggle="collapse" data-target="#mobilemenu" aria-controls="mobilemenu"
+                                        aria-expanded="false" aria-label="Toggle navigation">Menu</a>
                                     <button class="donate_menu donate"><span>Donate</span></button>
 
                                 </div>
@@ -460,7 +84,7 @@
                                 <div class="box-tagline">
 
                                     <p class="tagline">
-                                        <span style="font-size: 26pt;">
+                                        <span>
                                             Can you help make <span style="color: #ed5939;">positive change</span>
                                             happen?
                                         </span>
@@ -477,17 +101,16 @@
                     </div>
 
                     <!-- </div> -->
-                    <!-- <div class="clearfix" style="display: block; margin-top: 190px;"></div> -->
-                    <div class="container-fluid" style="background:#eee" id="menu-bar">
+                    <div class="container-fluid" id="menu-bar">
                         <!-- <div class="container"> -->
-                        <nav class="navbar navbar-expand-lg mainmenu">
+                        <nav class="navbar navbar-expand-lg navbar-light mainmenu">
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
                                 aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
 
-                            <div class="collapse navbar-collapse collapse-active" id="navbarTogglerDemo01">
+                            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
                                 <ul class="navbar-nav">
 
@@ -495,7 +118,7 @@
                                         <a href="index.html" class="nav-link">Home <span
                                                 class="sr-only">(current)</span></a>
                                     </li>
-                                    <li class="nav-item p-3 dropdown">
+                                    <li class="nav-item p-3 dropdown hasSubmenu">
                                         <!-- <span href="about.html" class="nav-link">About</span></a> -->
 
                                         <a href="#" class="nav-link dropdown-toggle" id="dropprograms"
@@ -510,7 +133,7 @@
                                             <a class="dropdown-item" href="faq.html">FAQ</a>
                                         </div>
                                     </li>
-                                    <li class="nav-item p-3 dropdown">
+                                    <li class="nav-item p-3 dropdown hasSubmenu">
                                         <a href="#" class="nav-link dropdown-toggle" id="dropprograms"
                                             data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">Programs</span></a>
@@ -530,7 +153,7 @@
                                         <a href="partners.html" class="nav-link">Partners</span></a>
                                     </li>
 
-                                    <li class="nav-item p-3 dropdown">
+                                    <li class="nav-item p-3 dropdown hasSubmenu">
                                         <a href="#" class="nav-link dropdown-toggle" id="dropmenu"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Get
                                             Involved</span></a>
@@ -561,6 +184,100 @@
                         </nav>
                     </div>
                 </div>
+
+                <nav id="mobilemenu" class="collapse navbar-collapse mobilemenu" role="navigation">
+                    <div class="mainCallToAction">
+                        <a href="volunteer.html" class="cta-button" tabindex="0"><span
+                                class="post_link">Volunteer</span></a>
+                        <a href="donation.html" class="cta-button cta-donate" tabindex="-1"><span
+                                class="post_link">Donate</span></a>
+                    </div>
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item active pb-3">
+                            <a href="index.html" class="nav-link">Home <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item pb-3 dropdown">
+
+                            <a href="#" class="nav-link dropdown-toggle" id="dropprograms" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="active">About</span></a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropprograms">
+                                <li><a class="dropdown-item" href="about.html">Who We Are</a></li>
+                                <li><a class="dropdown-item" href="about.html">What We Do</a></li>
+                                <li><a class="dropdown-item" href="about.html">Our Mission</a></li>
+                                <li><a class="dropdown-item" href="about.html">Meet Our Team </a></li>
+                                <li><a class="dropdown-item" href="">Completed Projects</a></li>
+                                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item pb-3 dropdown">
+
+                            <a href="#" class="nav-link dropdown-toggle" id="dropprograms" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="active">Programs</span></a>
+
+
+                            <ul class="dropdown-menu" aria-labelledby="dropprograms">
+                                <li><a class="dropdown-item" href="programs.html">ATN STEM</a></li>
+                                <li><a class="dropdown-item" href="programs.html">Codigen</a></li>
+                                <li><a class="dropdown-item" href="programs.html">Codigen School Club</a></li>
+                                <li><a class="dropdown-item" href="programs.html">Codigen BootCamp</a></li>
+                                <li><a class="dropdown-item" href="programs.html">Codigen Hackathon</a></li>
+                                <li><a class="dropdown-item" href="programs.html">ATN Foundation Award</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item pb-3">
+                            <a href="partners.html" class="nav-link">Partners</span></a>
+                        </li>
+
+                        <li class="nav-item pb-3 dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="dropmenu" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Get Involved</span></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropmenu">
+                                <li><a class="dropdown-item" href="volunteer.html">Volunteer as an instructor</a></li>
+                                <li><a class="dropdown-item" href="join-out-team.html">Join our Team</a></li>
+                                <li><a class="dropdown-item" href="donation.html">Donate to support an African Child
+                                        Tech
+                                        Initiative</a></li>
+                                <li><a class="dropdown-item" href="partners.html">Become a Partner</a></li>
+                                <li><a class="dropdown-item" href="volunteer.html">Volunteer your Hub</a></li>
+                                <li><a class="dropdown-item" href="contribute.html">Contribute to Open Source Project
+                                        Initiative</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-item pb-3">
+                            <a href="news.html" class="nav-link">News</span></a>
+                        </li>
+                        <li class="nav-item pb-3">
+                            <a href="contact.html" class="nav-link">Contact</span></a>
+                        </li>
+                    </ul>
+
+                    <!-- <div class="top-menu">
+                            <li class="search">
+                                <form id="search" class="header-search " action="/pages/search.aspx" method="get">
+                                    <fieldset class="searchContainer" role="search">
+                                        <label for="siteSearch" class="siteSearch">Search</label>
+                                        <input type="search" title="Search" id="siteSearch" placeholder="Search" name="q">
+                                        <button type="submit" tabindex=""
+                                            onclick="submitSearch('6LdTro0UAAAAAGeif0XCJ6-XT4hER5N3RQpS9Z2u')">Search</button>
+                                    </fieldset>
+                                </form>
+                            </li>
+                        </div> -->
+                    <ul class="socialIcons mceNonEditable">
+                        <li><a href="https://www.facebook.com/" tabindex="-1"><span class="fab fa-facebook"></span></a>
+                        </li>
+                        <li><a href="https://twitter.com/" tabindex="-1"><span class="fab fa-twitter"></span></a></li>
+                    </ul>
+                </nav>
+
+
+
                 <!-- SLIDER -->
                 <div class="slider">
                     <div class="overlay"></div>
@@ -1245,14 +962,10 @@
                 </footer>
 
     </main>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script> -->
     <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- <script src="js/bootstrap.min.js"></script> -->
-    <script src="js/main.js"></script>
 </body>
 
 </html>

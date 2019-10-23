@@ -1,931 +1,819 @@
 <!DOCTYPE html>
-<html lang="en">
+<a lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ATN Foundation</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/donation.css">
-    <link href="css/all.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ATN Foundation</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/donation.css">
+        <link href="css/all.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
 
+        <!-- 
 
+        <style>
+            .form-control:focus,
+            .form-control:active {
+                border-color: none;
+                border: 1px solid orange;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px orange;
+                outline: none;
 
-    <style>
-        .form-control:focus,
-        /* button:focus, */
-        .form-control:active {
-            border-color: none;
-            border: 1px solid orange;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px orange;
-            outline: none;
-
-        }
-
-        .font body {
-            font-family: "Nunito", sans-serif !important;
-        }
-
-        input,
-        select,
-        textarea,
-        button {
-            /* border: 2px solid orange; */
-            /* outline: none; */
-            box-shadow: none !important
-        }
-
-        .top-menu .topheader {
-            max-height: 45px;
-            background: #ed5939;
-        }
-
-        .top-menu ul {
-            color: #ffffff;
-            height: 45px;
-            padding: 0 20px;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-            flex-direction: row;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-        }
-
-        .top-menu li {
-            display: inline-block;
-            text-align: left;
-            vertical-align: top;
-        }
-
-        .top-menu li a {
-
-            border-left: 0;
-            font-size: 1.5rem;
-            line-height: 45px;
-            padding: 0 10px;
-        }
-
-        .top-menu .topheader li a {
-            color: #fff;
-        }
-
-        .top-menu li.search {
-            flex: 1
-        }
-
-        .top-menu li.search form {
-            float: right;
-            display: block;
-            margin: 0;
-        }
-
-        .top-menu li.search form fieldset {
-            float: right;
-            display: block;
-            margin: 0;
-            position: relative;
-        }
-
-        .top-menu .searchLabel {
-            border: 0;
-            clip: rect(0 0 0 0);
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-            padding: 0;
-            position: absolute;
-            width: 1px;
-        }
-
-        .top-menu #search {
-            font-size: 1.4rem;
-            color: #fff;
-
-        }
-
-        .top-menu form.header-search #search {
-            width: 200px;
-            margin-top: 0;
-            height: 45px;
-            vertical-align: top;
-            background-color: rgba(255, 255, 255, 0.2) !important;
-            color: #fff !important;
-            border: 0 !important;
-            border-radius: 0 !important;
-        }
-
-        .top-menu .input-group div button,
-        .top-menu .input-group div {
-            background-color: rgba(255, 255, 255, 0.2) !important;
-            color: #fff !important;
-            border: 0 !important;
-            border-radius: 0 !important;
-        }
-
-
-        .mainlogo {
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center left;
-            height: 132px;
-            float: left;
-            display: block;
-            margin-top: 20px;
-            margin: 20px 0;
-            text-indent: -999px;
-            background: no-repeat 0 0;
-            overflow: hidden;
-            -webkit-print-color-adjust: exact;
-        }
-
-        .top-menu .tagline {
-            flex: 1;
-            margin: 0;
-            margin-right: 20px;
-            font-size: 1rem;
-            color: #333f48;
-            font-weight: 700;
-            font-family: Chewy, sans-serif;
-        }
-
-
-        .top-menu .box-tagline {
-            margin: 20px 0 20px 20px;
-            -webkit-box-flex: 1;
-            -ms-flex: 1;
-            flex: 1;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: left;
-            -webkit-box-pack: end;
-            -ms-flex-pack: end;
-            justify-content: flex-end;
-        }
-
-        .menu-btn {
-            color: #fff
-        }
-
-        .menu-btn button {
-            border: 0;
-            margin: 0;
-            padding: .5em 1.7em;
-            background: #ed5939;
-            color: #fff;
-            border-radius: 0
-        }
-
-        .menu-btn button:first-child {
-            margin-left: 2px;
-            margin-right: 1.5rem;
-        }
-
-        .menu-btn button:last-child {
-            background-color: #333f48;
-        }
-
-        .menu-btn span {
-            font-size: 2rem;
-            line-height: 1.5;
-            font-weight: bolder;
-        }
-
-        .menu-bar {
-            background-color: #F0F0F0;
-        }
-
-        .mainmenu {
-            background-color: #F0F0F0;
-            width: 100%;
-            float: none;
-            position: relative;
-            top: auto;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-        }
-
-
-        .mainmenu ul {
-            width: 100%;
-            max-width: 1170px;
-            padding-left: 20px;
-            padding-right: 20px;
-            margin: 0 auto;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-        }
-
-        .mainmenu ul li>a {
-            color: #333;
-            height: auto;
-            padding: .5rem 2.1rem !important;
-            font-weight: normal;
-            word-break: normal;
-            font-size: 1.7rem;
-        }
-
-        header .mobile {
-            display: none;
-
-            /* display: -webkit-box; */
-            /* display: -ms-flexbox; */
-            /* display: flex; */
-            /* -webkit-box-align: center; */
-            /* -ms-flex-align: center; */
-            /* align-items: center; */
-
-            /* max-width: 1170px; */
-            padding-left: 20px;
-            padding-right: 20px;
-
-            /* width: 100%; */
-            /* margin: 0 auto; */
-            /* min-height: 100px; */
-        }
-
-        .mobilemenu {
-            position: none;
-            top: 100%;
-            z-index: 2;
-            -webkit-transition: all 0.4s ease-in;
-            -o-transition: all 0.4s ease-in;
-            transition: all 0.4s ease-in;
-            /* max-height: 0; */
-            overflow: hidden;
-
-            background-color: #F0F0F0;
-            float: none;
-            position: relative;
-            top: auto;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden
-        }
-
-        .collapse-active {
-            transition: cubic-bezier();
-            display: none;
-            /* overflow-y: scroll; */
-
-        }
-
-
-        @media screen and (max-width: 768px) {
-            .mobilemenu .collapse-active {
-                max-height: calc(100vh - 100px);
-                padding-bottom: 20px;
-                max-height: 55em
             }
 
-            header .top-menu {
-                min-height: 100px;
+            .font body {
+                font-family: "Nunito", sans-serif !important;
             }
 
-            header .menuMainAlt {
+            input,
+            select,
+            textarea,
+            button {
+                box-shadow: none !important
+            }
+
+            .top-menu .topheader {
+                max-height: 45px;
+                background: #ed5939;
+            }
+
+            .top-menu ul {
+                color: #ffffff;
+                height: 45px;
+                padding: 0 20px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            .top-menu li {
+                display: inline-block;
+                text-align: left;
+                vertical-align: top;
+            }
+
+            .top-menu li a {
+
+                border-left: 0;
+                font-size: 1.5rem;
+                line-height: 45px;
+                padding: 0 10px;
+            }
+
+            .top-menu .topheader li a {
+                color: #fff;
+            }
+
+            .top-menu li.search {
+                flex: 1
+            }
+
+            .top-menu li.search form {
+                float: right;
                 display: block;
-                color: #c74000;
-                background-color: transparent;
-                position: absolute;
-                float: none;
-                right: 20px;
-                text-align: center;
-                text-transform: uppercase;
-                padding: .5em 0;
-                font-weight: 700;
+                margin: 0;
             }
 
-            a.menuMainAlt:before {
-                text-rendering: auto;
-                -webkit-font-smoothing: antialiased;
+            .top-menu li.search form fieldset {
+                float: right;
+                display: block;
+                margin: 0;
+                position: relative;
+            }
+
+            .top-menu .searchLabel {
+                border: 0;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
                 padding: 0;
-                font-size: 2rem;
-                line-height: inherit;
-                color: #333f48;
-                display: block;
-                font-weight: 400;
-                font-family: 'FontAwesome';
-                content: '\f0c9';
+                position: absolute;
+                width: 1px;
             }
 
-            a.menuMainAlt:after {
-                content: " ";
-                visibility: hidden;
-                display: block;
-                height: 0;
-                clear: both;
+            .top-menu #search {
+                font-size: 1.4rem;
+                color: #fff;
+
             }
 
-            header .mobile {
-                display: block;
+            .top-menu form.header-search #search {
+                width: 200px;
+                margin-top: 0;
+                height: 45px;
+                vertical-align: top;
+                background-color: rgba(255, 255, 255, 0.2) !important;
+                color: #fff !important;
+                border: 0 !important;
+                border-radius: 0 !important;
             }
 
-            header .donate {
-                padding: .5em 1em;
-                display: block;
-                width: auto;
-                /* vertical-align: middle; */
+            .top-menu .input-group div button,
+            .top-menu .input-group div {
+                background-color: rgba(255, 255, 255, 0.2) !important;
+                color: #fff !important;
+                border: 0 !important;
+                border-radius: 0 !important;
             }
 
-            header .main-tagline {
-                display: none;
-            }
 
-            header .topheader {
-                display: none;
-            }
-
-            header .desktop {
-                display: none;
-            }
-
-            .mobile .mainlogo {
-                margin: 10px 10px;
-                width: 80px;
-                height: 66px;
-                max-width: 100%;
+            .mainlogo {
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center left;
+                height: 132px;
+                float: left;
+                display: block;
+                margin-top: 20px;
+                margin: 20px 0;
+                text-indent: -999px;
+                background: no-repeat 0 0;
+                overflow: hidden;
+                -webkit-print-color-adjust: exact;
             }
 
-            .mobile .mobile-tag {
-                margin-right: 60px;
-                display: flex;
+            .top-menu .tagline {
                 flex: 1;
-                align-items: center;
+                margin: 0;
+                margin-right: 20px;
+                font-size: 1rem;
+                color: #333f48;
+                font-weight: 700;
+                font-family: Chewy, sans-serif;
+            }
+
+
+            .top-menu .box-tagline {
+                margin: 20px 0 20px 20px;
+                -webkit-box-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: left;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
                 justify-content: flex-end;
-                margin: 0 80px 0 20px;
-                flex-wrap: wrap;
-                float: right;
             }
 
-            #menu-bar {
+            .menu-btn {
+                color: #fff
+            }
+
+            .menu-btn button {
+                border: 0;
+                margin: 0;
+                padding: .5em 1.7em;
+                background: #ed5939;
+                color: #fff;
+                border-radius: 0
+            }
+
+            .menu-btn button:first-child {
+                margin-left: 2px;
+                margin-right: 1.5rem;
+            }
+
+            .menu-btn button:last-child {
+                background-color: #333f48;
+            }
+
+            .menu-btn span {
+                font-size: 2rem;
+                line-height: 1.5;
+                font-weight: bolder;
+            }
+
+            .menu-bar {
+                background-color: #F0F0F0;
+            }
+
+            .mainmenu {
+                background-color: #F0F0F0;
+                width: 100%;
+                float: none;
+                position: relative;
+                top: auto;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+
+
+            .mainmenu ul {
+                width: 100%;
+                max-width: 1170px;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin: 0 auto;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+
+            .mainmenu ul li>a {
+                color: #333;
+                height: auto;
+                padding: .5rem 2.1rem !important;
+                font-weight: normal;
+                word-break: normal;
+                font-size: 1.7rem;
+            }
+
+            header .mobile {
                 display: none;
-            }
-        }
 
-        @media screen and (max-width: 320px) {
-            header .donate {
+                padding-left: 20px;
+                padding-right: 20px;
+
+            }
+
+            .mobilemenu {
+                position: none;
+                top: 100%;
+                z-index: 2;
+                -webkit-transition: all 0.4s ease-in;
+                -o-transition: all 0.4s ease-in;
+                transition: all 0.4s ease-in;
+                overflow: hidden;
+
+                background-color: #F0F0F0;
+                float: none;
+                position: relative;
+                top: auto;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden
+            }
+
+            .mobilemenu .collapse-active {
+                transition: cubic-bezier();
                 display: none;
+                overflow-y: scroll;
+
             }
 
-            .mobile .mobile-tag {
-                margin: 30px 80px 0 20px;
-                align-items: baseline;
+
+            @media screen and (max-width: 768px) {
+                .mobilemenu .collapse-active {
+                    max-height: calc(100vh - 100px);
+                    padding-bottom: 20px;
+                    max-height: 55em
+                }
+
+                header .top-menu {
+                    min-height: 100px;
+                }
+
+                header .menuMainAlt {
+                    display: block;
+                    color: #c74000;
+                    background-color: transparent;
+                    position: absolute;
+                    float: none;
+                    right: 20px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    padding: .5em 0;
+                    font-weight: 700;
+                }
+
+                a.menuMainAlt:before {
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    padding: 0;
+                    font-size: 2rem;
+                    line-height: inherit;
+                    color: #333f48;
+                    display: block;
+                    font-weight: 400;
+                    font-family: 'FontAwesome';
+                    content: '\f0c9';
+                }
+
+                a.menuMainAlt:after {
+                    content: " ";
+                    visibility: hidden;
+                    display: block;
+                    height: 0;
+                    clear: both;
+                }
+
+                header .mobile {
+                    display: block;
+                }
+
+                header .donate {
+                    padding: .5em 1em;
+                    display: block;
+                    width: auto;
+                }
+
+                header .main-tagline {
+                    display: none;
+                }
+
+                header .topheader {
+                    display: none;
+                }
+
+                header .desktop {
+                    display: none;
+                }
+
+                .mobile .mainlogo {
+                    margin: 10px 10px;
+                    width: 80px;
+                    height: 66px;
+                    max-width: 100%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center left;
+                }
+
+                .mobile .mobile-tag {
+                    margin-right: 60px;
+                    display: flex;
+                    flex: 1;
+                    align-items: center;
+                    justify-content: flex-end;
+                    margin: 0 80px 0 20px;
+                    flex-wrap: wrap;
+                    float: right;
+                }
+
+                #menu-bar {
+                    display: none;
+                }
             }
-        }
-    </style>
-</head>
 
-<body>
-    <main>
-        <header>
+            @media screen and (max-width: 320px) {
+                header .donate {
+                    display: none;
+                }
 
-            <div class="top-menu">
-                <div class="container-fluid text-center topheader">
-                    <ul class="container">
-                        <li><a href="#">Sign Up</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li class="search">
-                            <form class="header-search" action="">
-                                <fieldset>
+                .cta-donate {
+                    display: block !important;
+                }
 
-                                    <div class="input-group">
-                                        <input type="text" id="search" class="form-control" placeholder="Search">
-                                        <div class="input-group-append">
-                                            <button type="submit" style="font-size: 1.5rem;"
-                                                class="btn btn-outline-secondary"><i class="fa fa-search"
-                                                    aria-hidden="true"></i></button>
+                .mobile .mobile-tag {
+                    margin: 30px 80px 0 20px;
+                    align-items: baseline;
+                }
+            }
+        </style> -->
+    </head>
+
+    <body>
+        <main>
+            <header>
+
+                <div class="top-menu">
+                    <div class="container-fluid text-center topheader">
+                        <ul class="container">
+                            <li><a href="#">Sign Up</a></li>
+                            <li><a href="#">Login</a></li>
+                            <li class="search">
+                                <form class="header-search" action="">
+                                    <fieldset>
+
+                                        <div class="input-group">
+                                            <input type="text" id="search" class="form-control" placeholder="Search">
+                                            <div class="input-group-append">
+                                                <button type="submit" style="font-size: 1.5rem;"
+                                                    class="btn btn-outline-secondary"><i class="fa fa-search"
+                                                        aria-hidden="true"></i></button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </fieldset>
+                                    </fieldset>
 
-                            </form>
-                        </li>
-                        <ul>
-                            <li style="padding: 0px 10px; font-size: 2rem;"><span class="fab fa-facebook-f"></span></li>
-                            <li style="padding: 0px 10px; font-size: 2rem;"><span class="fab fa-twitter"></span></li>
+                                </form>
+                            </li>
+                            <ul>
+                                <li style="padding: 0px 10px; font-size: 2rem;"><span class="fab fa-facebook-f"></span>
+                                </li>
+                                <li style="padding: 0px 10px; font-size: 2rem;"><span class="fab fa-twitter"></span>
+                                </li>
+                            </ul>
                         </ul>
-                    </ul>
-                </div>
-
-                <div class="mobile">
-                    <div class="row">
-                        <div class="m-3">
-                            <a href="#">
-                                <img src="images/logo.png" class="img-fluid mainlogo " alt="Atn Foundation" srcset="">
-                            </a>
-                        </div>
-                        <div class="mobile-tag">
-                            <div class="menu-btn">
-                                <a class="menuMainAlt" id="mobilemenubtn" href="#menu" data-toggle="collapse"
-                                    data-target="#mobilemenu" aria-controls="mobilemenu" aria-expanded="false"
-                                    aria-label="Toggle navigation">Menu</a>
-                                <button class="donate_menu donate"><span>Donate</span></button>
-
-                            </div>
-                        </div>
                     </div>
 
-                </div>
-
-
-                <div class="container desktop" style="width:100%; margin:0 auto;">
-                    <div class="row align-items-center">
-                        <div class="col-md-2">
-                            <a href="#">
-                                <img src="images/logo.png" class="img-fluid mainlogo " alt="Atn Foundation" srcset="">
-                            </a>
-                        </div>
-                        <div class="col-md-10 col-lg-10 col-xs-10 main-tagline">
-                            <div class="box-tagline">
-
-                                <p class="tagline">
-                                    <span style="font-size: 26pt;">
-                                        Can you help make <span style="color: #ed5939;">positive change</span> happen?
-                                    </span>
-
-                                </p>
+                    <div class="mobile">
+                        <div class="row">
+                            <div class="m-3">
+                                <a href="#">
+                                    <img src="images/logo.png" class="img-fluid mainlogo " alt="Atn Foundation"
+                                        srcset="">
+                                </a>
+                            </div>
+                            <div class="mobile-tag">
                                 <div class="menu-btn">
-                                    <button class="donate_menu"><span>Volunteer</span></button>
+                                    <a class="menuMainAlt navbar-toggle" id="mobilemenubtn" href="#menu"
+                                        data-toggle="collapse" data-target="#mobilemenu" aria-controls="mobilemenu"
+                                        aria-expanded="false" aria-label="Toggle navigation">Menu</a>
                                     <button class="donate_menu donate"><span>Donate</span></button>
+
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
-                </div>
 
-                <!-- </div> -->
-                <!-- <div class="clearfix" style="display: block; margin-top: 190px;"></div> -->
-                <div class="container-fluid" style="background:#eee" id="menu-bar">
-                    <!-- <div class="container"> -->
-                    <nav class="navbar navbar-expand-lg navbar-light mainmenu">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                    <div class="container desktop" style="width:100%; margin:0 auto;">
+                        <div class="row align-items-center">
+                            <div class="col-md-2">
+                                <a href="#">
+                                    <img src="images/logo.png" class="img-fluid mainlogo " alt="Atn Foundation"
+                                        srcset="">
+                                </a>
+                            </div>
+                            <div class="col-md-10 col-lg-10 col-xs-10 main-tagline">
+                                <div class="box-tagline">
 
-                        <div class="collapse navbar-collapse collapse-active" id="navbarTogglerDemo01">
+                                    <p class="tagline">
+                                        <span >
+                                            Can you help make <span style="color: #ed5939;">positive change</span>
+                                            happen?
+                                        </span>
 
-                            <ul class="navbar-nav">
-
-                                <li class="nav-item active p-3">
-                                    <a href="index.html" class="nav-link">Home <span
-                                            class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item p-3 dropdown">
-                                    <!-- <span href="about.html" class="nav-link">About</span></a> -->
-
-                                    <a href="#" class="nav-link dropdown-toggle" id="dropprograms"
-                                        data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">About</span></a>
-                                    <div class="dropdown-menu" aria-labelledby="dropprograms">
-                                        <a class="dropdown-item" href="about.html">Who We Are</a>
-                                        <a class="dropdown-item" href="about.html">What We Do</a>
-                                        <a class="dropdown-item" href="about.html">Our Mission</a>
-                                        <a class="dropdown-item" href="about.html">Meet Our Team </a>
-                                        <a class="dropdown-item" href="">Completed Projects</a>
-                                        <a class="dropdown-item" href="faq.html">FAQ</a>
+                                    </p>
+                                    <div class="menu-btn">
+                                        <button class="donate_menu"><span>Volunteer</span></button>
+                                        <button class="donate_menu donate"><span>Donate</span></button>
                                     </div>
-                                </li>
-                                <li class="nav-item p-3 dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" id="dropprograms"
-                                        data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">Programs</span></a>
-
-
-                                    <div class="dropdown-menu" aria-labelledby="dropprograms">
-                                        <a class="dropdown-item" href="programs.html">ATN STEM</a>
-                                        <a class="dropdown-item" href="programs.html">Codigen</a>
-                                        <a class="dropdown-item" href="programs.html">Codigen School Club</a>
-                                        <a class="dropdown-item" href="programs.html">Codigen BootCamp</a>
-                                        <a class="dropdown-item" href="programs.html">Codigen Hackathon</a>
-                                        <a class="dropdown-item" href="programs.html">ATN Foundation Award</a>
-                                    </div>
-                                </li>
-
-                                <li class="nav-item p-3">
-                                    <a href="partners.html" class="nav-link">Partners</span></a>
-                                </li>
-
-                                <li class="nav-item p-3 dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" id="dropmenu" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">Get Involved</span></a>
-                                    <div class="dropdown-menu" aria-labelledby="dropmenu">
-                                        <a class="dropdown-item" href="volunteer.html">Volunteer as an instructor</a>
-                                        <a class="dropdown-item" href="join-out-team.html">Join our Team</a>
-                                        <a class="dropdown-item" href="donation.html">Donate to support an African Child
-                                            Tech
-                                            Initiative</a>
-                                        <a class="dropdown-item" href="partners.html">Become a Partner</a>
-                                        <a class="dropdown-item" href="volunteer.html">Volunteer your Hub</a>
-                                        <a class="dropdown-item" href="contribute.html">Contribute to Open Source
-                                            Project
-                                            Initiative</a>
-                                    </div>
-
-                                </li>
-                                <li class="nav-item p-3">
-                                    <a href="news.html" class="nav-link">News</span></a>
-                                </li>
-                                <li class="nav-item p-3">
-                                    <a href="contact.html" class="nav-link">Contact</span></a>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
                         </div>
-                    </nav>
+
+                    </div>
+
+                    <!-- </div> -->
+                    <div class="container-fluid" style="background:#eee" id="menu-bar">
+                        <!-- <div class="container"> -->
+                        <nav class="navbar navbar-expand-lg navbar-light mainmenu">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                                <ul class="navbar-nav">
+
+                                    <li class="nav-item active p-3">
+                                        <a href="index.html" class="nav-link">Home <span
+                                                class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item p-3 dropdown hasSubmenu">
+                                        <!-- <span href="about.html" class="nav-link">About</span></a> -->
+
+                                        <a href="#" class="nav-link dropdown-toggle" id="dropprograms"
+                                            data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">About</span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dropprograms">
+                                            <a class="dropdown-item" href="about.html">Who We Are</a>
+                                            <a class="dropdown-item" href="about.html">What We Do</a>
+                                            <a class="dropdown-item" href="about.html">Our Mission</a>
+                                            <a class="dropdown-item" href="about.html">Meet Our Team </a>
+                                            <a class="dropdown-item" href="">Completed Projects</a>
+                                            <a class="dropdown-item" href="faq.html">FAQ</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item p-3 dropdown hasSubmenu">
+                                        <a href="#" class="nav-link dropdown-toggle" id="dropprograms"
+                                            data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">Programs</span></a>
+
+
+                                        <div class="dropdown-menu" aria-labelledby="dropprograms">
+                                            <a class="dropdown-item" href="programs.html">ATN STEM</a>
+                                            <a class="dropdown-item" href="programs.html">Codigen</a>
+                                            <a class="dropdown-item" href="programs.html">Codigen School Club</a>
+                                            <a class="dropdown-item" href="programs.html">Codigen BootCamp</a>
+                                            <a class="dropdown-item" href="programs.html">Codigen Hackathon</a>
+                                            <a class="dropdown-item" href="programs.html">ATN Foundation Award</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item p-3">
+                                        <a href="partners.html" class="nav-link">Partners</span></a>
+                                    </li>
+
+                                    <li class="nav-item p-3 dropdown hasSubmenu">
+                                        <a href="#" class="nav-link dropdown-toggle" id="dropmenu"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Get
+                                            Involved</span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dropmenu">
+                                            <a class="dropdown-item" href="volunteer.html">Volunteer as an
+                                                instructor</a>
+                                            <a class="dropdown-item" href="join-out-team.html">Join our Team</a>
+                                            <a class="dropdown-item" href="donation.html">Donate to support an African
+                                                Child
+                                                Tech
+                                                Initiative</a>
+                                            <a class="dropdown-item" href="partners.html">Become a Partner</a>
+                                            <a class="dropdown-item" href="volunteer.html">Volunteer your Hub</a>
+                                            <a class="dropdown-item" href="contribute.html">Contribute to Open Source
+                                                Project
+                                                Initiative</a>
+                                        </div>
+
+                                    </li>
+                                    <li class="nav-item p-3">
+                                        <a href="news.html" class="nav-link">News</span></a>
+                                    </li>
+                                    <li class="nav-item p-3">
+                                        <a href="contact.html" class="nav-link">Contact</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
-            </div>
 
-
-            <style>
-                .cta-button {
-                    width: 100%;
-                    margin: 5px 0;
-                    text-align: center;
-                    background-color: #ff671f;
-                    color: #fff;
-                    display: inline-block;
-                    vertical-align: middle;
-                    padding: 0.75em 1.5em;
-                    /* font-size: 0.875rem; */
-                    transition: all 300ms ease;
-                }
-
-                .mainCallToAction {
-                    padding: 20px 20px 5px 20px;
-                }
-
-                #mobilemenu ul li {
-                    display: block;
-                    width: 100%;
-                }
-
-                .topLevel {
-                    display: block;
-                    padding-left: 0;
-                    padding-right: 0;
-                    border-top: 0;
-                }
-
-                .mobilemenu ul li>a {
-                    color: #333;
-                    height: auto;
-                    padding: 1rem 1.5rem;
-                    font-weight: 400;
-                    word-break: normal;
-                }
-
-                .mobilemenu ul li .subMenu {
-                    padding: 0;
-                    margin: 0;
-                    max-height: 0;
-                    max-width: 100%;
-                    overflow: hidden;
-                    position: inherit;
-                    -webkit-box-shadow: none;
-                    box-shadow: none;
-                    background-color: rgba(0, 0, 0, 0.05);
-                    border: 0;
-                    z-index: 2;
-                }
-
-                .mobilemenu li.hasSubmenu>a:after {
-                    padding: 0;
-                    position: absolute;
-                    font-size: 1em;
-                    display: inline-block;
-                    top: 10px;
-                    right: 20px;
-                    font-family: 'FontAwesome';
-                    content: '\f107';
-                }
-
-                @media screen and (max-width: 768px) {
-                    .mobilemenu li a {
-                        display: block;
+                <!-- 
+                <style>
+                    .cta-button {
+                        width: 100%;
+                        margin: 5px 0;
+                        text-align: center;
+                        background-color: #ff671f;
+                        color: #fff;
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding: 0.75em 1.5em;
+                        transition: all 300ms ease;
                     }
 
-                    .mobilemenu ul ul,
-                    .mobilemenu ul ul ul {
-                        display: inherit;
-                        position: relative;
-                        left: auto;
-                        top: auto;
+                    .mainCallToAction {
+                        padding: 20px 20px 5px 20px;
+
+                    }
+
+                    #mobilemenu ul li .nav-link {
+                        padding: 20px 20px 5px 20px !important;
+                        font-size: 14px
+                    }
+
+                    #mobilemenu .nav-link:hover {
+                        color: #c74000;
+                    }
+
+                    #mobilemenu ul li {
+                        display: block;
+                        width: 100%;
+                        font-size: 14px
+                    }
+
+                    .topLevel {
+                        display: block;
+                        padding-left: 0;
+                        padding-right: 0;
+                        border-top: 0;
+                    }
+
+                    .mobilemenu ul li>a {
+                        color: #333;
+                        height: auto;
+                        padding: 1rem 1.5rem;
+                        font-weight: 400;
+                        word-break: normal;
+                    }
+
+                    .mobilemenu ul li .dropdown-menu {
+                        max-height: 0;
+                        max-width: 100% !important;
+                        overflow: hidden;
+                        position: static !important;
+                        -webkit-box-shadow: none;
                         box-shadow: none;
-                        border: none;
+                        background-color: rgba(0, 0, 0, 0.05);
+                        border: 0;
+                        z-index: 2;
+                        left: auto !important;
+                        top: auto !important;
+                        width: 100%;
+                        transform: none !important;
+                        will-change: unset !important;
+                        border-radius: 0 !important;
+                        min-width: 200px !important;
+
                     }
 
-                    .mobilemenu li.hasSubmenu>a:after {
-                        content: '+';
+                    .mobilemenu ul li ul {
+                        padding: 0 !important;
+                        margin: 0 !important;
+                    }
+
+                    .mobilemenu ul li .dropdown-menu.show {
+                        max-height: 55em !important;
+                        display: block !important;
+                    }
+
+                    .mobilemenu li.dropdown-menu>a:after {
+                        padding: 0;
                         position: absolute;
-                        top: 0;
-                        right: 0;
-                        display: block;
-                        font-size: 1.5em;
-                        padding: 0 .5em;
+                        font-size: 1em;
+                        display: inline-block;
+                        top: 10px;
+                        right: 20px;
+                        font-family: 'FontAwesome';
+                        content: '\f107';
                     }
-                }
-            </style>
-            <!-- MOBILE MENU -->
-            <nav id="mobilemenu" class="mobilemenu " role="navigation" style="display:none">
-                <div class="mainCallToAction">
-                    <!-- <p class="tagline"><span style="font-size: 26pt;">Can you help make <span
-                                style="color: #ff6600;">positive change</span> happen?</span></p> -->
-                    <a href="/volunteer" class="cta-button" tabindex="0"><span class="post_link">Volunteer</span></a>
-                    <!-- <a href="/donate/the-zero-hero-appeal/5/credit-card" class="cta-button cta-donate"
-                        tabindex="-1"><span class="post_link">Donate</span></a> -->
-                </div>
-                <ul class="topLevel level1 " role="menubar" aria-label="Main menu">
-                    <li id="menu581fb888-5909-4800-bc95-7878fe359ffe" role="none" class="level1 menu1 dir hasSubmenu"><a
-                            aria-haspopup="true" aria-expanded="false" role="menuitem"
-                            href="/Pages/Display.aspx?Title=about-us" title="About us drop down menu"
-                            aria-label="About us" tabindex="-1" class="">
-                            About us
-                        </a>
-                        <ul class="subMenu level2 menu1" role="menu" aria-label="About us">
-                            <li id="menud676c86c-9a3a-4ab9-8885-3aa4014d36fe" role="none" class="level2 menu1_1"><a
-                                    role="menuitem" href="/strategic-plan" aria-label="Our Strategic Plan"
-                                    tabindex="-1">
-                                    Our Strategic Plan
-                                </a></li>
-                            <li id="menu1be9a06f-49e6-43b6-bebb-9de31bc2b1ac" role="none"
-                                class="level2 menu1_2 dir hasSubmenu"><a aria-haspopup="true" aria-expanded="false"
-                                    role="menuitem" href="/Pages/Display.aspx?Title=what-we-do"
-                                    title="What we do drop down menu" aria-label="What we do" tabindex="-1">
-                                    What we do
-                                </a>
-                                <ul class="subMenu level3 menu1_2" role="menu" aria-label="What we do">
-                                    <li id="menu62960303-c4ca-468a-8f4b-5db509853b3b" role="none"
-                                        class="level3 menu1_2_1"><a role="menuitem" href="/preventing-hiv"
-                                            aria-label="Preventing HIV" tabindex="-1">
-                                            Preventing HIV
-                                        </a></li>
-                                    <li id="menu606506ee-d0bb-46cb-9e0f-7592cfa0882d" role="none"
-                                        class="level3 menu1_2_2"><a role="menuitem"
-                                            href="/access-to-treatment-care-support"
-                                            aria-label="Access to treatment, care and support" tabindex="-1">
-                                            Access to treatment, care &amp; support
-                                        </a></li>
-                                    <li id="menu2a4e7a7c-6f0f-4a38-a2a7-ce29d4cc8b1b" role="none"
-                                        class="level3 menu1_2_3"><a role="menuitem" href="/meaningful-involvement"
-                                            aria-label="Meaningful involvement" tabindex="-1">
-                                            Meaningful involvement
-                                        </a></li>
-                                    <li id="menu045395f6-d954-4716-8ca6-60eeff921c03" role="none"
-                                        class="level3 menu1_2_4"><a role="menuitem" href="/bringing-the-sector-together"
-                                            aria-label="Bringing the sector together" tabindex="-1">
-                                            Bringing the sector together
-                                        </a></li>
-                                    <li id="menu7d172194-63a3-4b72-8a59-9a41387cb1e7" role="none"
-                                        class="level3 menu1_2_5"><a role="menuitem" href="/informing-the-public"
-                                            aria-label="Informing the public" tabindex="-1">
-                                            Informing the public
-                                        </a></li>
-                                </ul>
-                            </li>
-                            <li id="menueb28bdd6-65dd-4489-a3f8-443908e0d92e" role="none" class="level2 menu1_3"><a
-                                    role="menuitem" href="/Pages/FAQs/Category/team/Tag/team" aria-label="Meet the team"
-                                    tabindex="-1">
-                                    Meet the team
-                                </a></li>
-                            <li id="menu83fd32ff-34fc-4488-ae4a-f6de55fd2f08" role="none" class="level2 menu1_4"><a
-                                    role="menuitem" href="/our-history-1" aria-label="Our history" tabindex="-1">
-                                    Our history
-                                </a></li>
-                            <li id="menu73e85b43-5adc-480f-b168-4b12b9c36085" role="none" class="level2 menu1_5"><a
-                                    role="menuitem" href="/Pages/FAQs/Category/jobs/" aria-label="Jobs" tabindex="-1">
-                                    Jobs
-                                </a></li>
-                        </ul>
-                    </li>
-                    <li id="menu1999e879-b474-44e1-9487-077829b50776" role="none" class="level1 menu2 dir hasSubmenu"><a
-                            aria-haspopup="true" aria-expanded="false" role="menuitem"
-                            href="/Pages/Display.aspx?Title=how-we-help" title="How we help drop down menu"
-                            aria-label="How we help" tabindex="-1" class="">
-                            How we help
-                        </a>
-                        <ul class="subMenu level2 menu2" role="menu" aria-label="How we help">
-                            <li id="menu18e5f887-4872-4a7b-9bee-341829999704" role="none" class="level2 menu2_1"><a
-                                    role="menuitem" href="/Pages/FAQs/Category/projects/" aria-label="Our projects"
-                                    tabindex="-1">
-                                    Our projects
-                                </a></li>
-                            <li id="menuc3a3ea8b-cadf-4554-b9a4-69a8119a1768" role="none" class="level2 menu2_2"><a
-                                    role="menuitem" href="/Pages/Category/training/Tag/training" aria-label="Training"
-                                    tabindex="-1">
-                                    Training
-                                </a></li>
-                            <li id="menu8f0914ab-93dd-47bd-97b8-2976faa75e38" role="none" class="level2 menu2_3"><a
-                                    role="menuitem" href="/Pages/News/Category/resources/" aria-label="Resources"
-                                    tabindex="-1">
-                                    Resources
-                                </a></li>
-                        </ul>
-                    </li>
-                    <li id="menue17f98d7-c22a-4c4a-8748-59ca90a979b3" role="none" class="level1 menu3 dir hasSubmenu"><a
-                            aria-haspopup="true" aria-expanded="false" role="menuitem"
-                            href="/Pages/Display.aspx?Title=our-impact-1" title="Our impact drop down menu"
-                            aria-label="Our impact" tabindex="-1">
-                            Our impact
-                        </a>
-                        <ul class="subMenu level2 menu3" role="menu" aria-label="Our impact">
-                            <li id="menu9d0621e0-b8e2-4471-aba0-c3eba075ad80" role="none" class="level2 menu3_1"><a
-                                    role="menuitem" href="/Pages/FAQs/Category/achievements/"
-                                    aria-label="The difference we make" tabindex="-1">
-                                    The difference we make
-                                </a></li>
-                            <li id="menubc764fc0-7e7b-41f0-afb3-91058a45671d" role="none" class="level2 menu3_2"><a
-                                    role="menuitem" href="/Blogs/share-your-story/Category/stories/Tag/story"
-                                    aria-label="Stories" tabindex="-1">
-                                    Stories
-                                </a></li>
-                            <li id="menud1914057-79d8-4a1a-9fe1-7e9b41c684c5" role="none" class="level2 menu3_3"><a
-                                    role="menuitem" href="/Pages/News/Category/research/Tag/research"
-                                    aria-label="Research" tabindex="-1">
-                                    Research
-                                </a></li>
-                        </ul>
-                    </li>
-                    <li id="menu16e02c7f-25cb-4c6a-83d1-c5b3883ae7c2" role="none" class="level1 menu4 dir hasSubmenu"><a
-                            aria-haspopup="true" aria-expanded="false" role="menuitem"
-                            href="/Pages/Display.aspx?Title=get-involved" title="Get involved drop down menu"
-                            aria-label="Get involved" tabindex="-1">
-                            Get involved
-                        </a>
-                        <ul class="subMenu level2 menu4" role="menu" aria-label="Get involved">
-                            <li id="menu1d0abfd2-85b7-482c-8aba-c6f97eef6428" role="none"
-                                class="level2 menu4_1 dir hasSubmenu"><a aria-haspopup="true" aria-expanded="false"
-                                    role="menuitem" href="/Pages/Display.aspx?Title=fundraise-for-us"
-                                    title="Fundraise for us drop down menu" aria-label="Fundraise for us" tabindex="-1">
-                                    Fundraise for us
-                                </a>
-                                <ul class="subMenu level3 menu4_1" role="menu" aria-label="Fundraise for us">
-                                    <li id="menucbdca0ce-7aa0-4bac-a675-9459b60ef7d7" role="none"
-                                        class="level3 menu4_1_1"><a role="menuitem"
-                                            href="/Pages/Appeal/Category/fundraise-for-us/" aria-label="#ZeroHero"
-                                            tabindex="-1">
-                                            #ZeroHero
-                                        </a></li>
-                                    <li id="menu9b73cb05-0b89-4fb3-a5c1-7a6c8d02f3dd" role="none"
-                                        class="level3 menu4_1_2"><a role="menuitem"
-                                            href="/Pages/Events/Category/challenge-events/Tag/sponsored"
-                                            aria-label="Sponsored events" tabindex="-1">
-                                            Sponsored events
-                                        </a></li>
-                                </ul>
-                            </li>
-                            <li id="menu39e3cd99-583e-44da-b52c-7281c633131f" role="none" class="level2 menu4_2"><a
-                                    role="menuitem" href="/Pages/FAQs/Category/fundraise-for-us/Tag/donate"
-                                    aria-label="Ways to help" tabindex="-1">
-                                    Ways to help
-                                </a></li>
-                            <li id="menu741fecd5-2c53-4b31-9aa3-16947c3ab299" role="none" class="level2 menu4_3"><a
-                                    role="menuitem" href="/volunteer" aria-label="Volunteer" tabindex="-1">
-                                    Volunteer
-                                </a></li>
-                        </ul>
-                    </li>
-                    <li id="menu1a70190b-32c5-43b2-924c-3d76c37003af" role="none" class="level1 menu5"><a
-                            role="menuitem" href="/Event/sex-drugs-and-scotlands-health" aria-label="Conference"
-                            tabindex="-1">
-                            Conference
-                        </a></li>
-                    <li id="menu342ff2a8-f7d9-4def-b1d2-ac978ec07e17" role="none" class="level1 menu6 dir hasSubmenu"><a
-                            aria-haspopup="true" aria-expanded="false" role="menuitem"
-                            href="/Pages/Display.aspx?Title=latest" title="Latest drop down menu" aria-label="Latest"
-                            tabindex="-1">
-                            Latest
-                        </a>
-                        <ul class="subMenu level2 menu6" role="menu" aria-label="Latest">
-                            <li id="menu6279f3e7-e652-41f3-b902-165b5d1dd7ef" role="none" class="level2 menu6_1"><a
-                                    role="menuitem" href="/Pages/News/Category/news/" aria-label="News" tabindex="-1">
-                                    News
-                                </a></li>
-                            <li id="menu1bedc395-b52d-436b-b5e4-65b11609b67f" role="none" class="level2 menu6_2"><a
-                                    role="menuitem" href="/Pages/Events/" aria-label="Events" tabindex="-1">
-                                    Events
-                                </a></li>
-                            <li id="menu6dd3c3c2-e7b3-4892-bdb3-8c6bc4b28967" role="none" class="level2 menu6_3"><a
-                                    role="menuitem" href="/Blogs/blogs" aria-label="Blogs" tabindex="-1">
-                                    Blogs
-                                </a></li>
-                        </ul>
-                    </li>
-                    <li id="menue49a9fe8-e632-4660-b51f-2a8618811bd7" role="none" class="level1 menu7 dir hasSubmenu"><a
-                            aria-haspopup="true" aria-expanded="false" role="menuitem" href="#"
-                            title="FAQs drop down menu" aria-label="FAQs" tabindex="-1">
-                            FAQs
-                        </a>
-                        <ul class="subMenu level2 menu7" role="menu" aria-label="FAQs">
-                            <li id="menu10ac45eb-7465-4561-a618-2dd43146e5e3" role="none" class="level2 menu7_1"><a
-                                    role="menuitem" href="/Pages/FAQs/Category/faqs/Tag/basic-facts"
-                                    aria-label="Basic Facts" tabindex="-1">
-                                    Basic Facts
-                                </a></li>
-                            <li id="menu612773ee-8052-48b3-9f38-6d53c2677a21" role="none" class="level2 menu7_2"><a
-                                    role="menuitem" href="/Pages/FAQs/Category/hiv-testing/Tag/testing"
-                                    aria-label="HIV Testing" tabindex="-1">
-                                    HIV Testing
-                                </a></li>
-                            <li id="menuf5bd6e79-4255-4905-ba8a-310cde2d521d" role="none" class="level2 menu7_3"><a
-                                    role="menuitem" href="/Pages/FAQs/Category/living-with-hiv/Tag/living-with-hiv"
-                                    aria-label="Living with HIV" tabindex="-1">
-                                    Living with HIV
-                                </a></li>
-                            <li id="menu0d17e8fd-5ff3-4588-9f47-e1808895fb36" role="none" class="level2 menu7_4"><a
-                                    role="menuitem" href="/Pages/FAQs/Category/hiv-treatment/Tag/treatment"
-                                    aria-label="HIV Treatment" tabindex="-1">
-                                    HIV Treatment
-                                </a></li>
-                            <li id="menu7d01de80-a723-4f62-9912-52e0aa432de7" role="none" class="level2 menu7_5"><a
-                                    role="menuitem" href="/Pages/FAQs/Category/prep/" aria-label="PrEP" tabindex="-1">
-                                    PrEP
-                                </a></li>
-                            <li id="menu00960df3-498e-47c6-a39a-6406fb24bb69" role="none" class="level2 menu7_6"><a
-                                    role="menuitem" href="/Pages/FAQs/Category/uu/" aria-label="U=U" tabindex="-1">
-                                    U=U
-                                </a></li>
-                        </ul>
-                    </li>
-                    <li id="menu15f1bfd2-091c-42dc-a41d-676afdf06e77" role="none" class="level1 menu8"><a
-                            role="menuitem" href="/contact-us" aria-label="Have a question?" tabindex="-1">
-                            Have a question?
-                        </a></li>
-                    <li id="menu6e3df0f3-a814-4452-bf0c-f53e2858d8ff" role="none" class="level1 menu9"><a
-                            role="menuitem" href="/shop" aria-label="Shop" tabindex="-1">
-                            Shop
-                        </a></li>
-                    <li class="hasSubmenu menuAdminAltItems">
-                        <a href="#" role="menuitem" tabindex="-1">
-                            Admin
-                        </a>
 
-                        <ul class="subMenu">
+                    .mobilemenu .cta-donate {
+                        background-color: #333f48;
+                        color: #fff;
+                        display: none;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        .mobilemenu li a {
+                            display: block;
+                        }
+
+                        .mobilemenu ul ul,
+                        .mobilemenu ul ul ul {
+                            display: inherit;
+                            position: relative;
+                            left: auto;
+                            top: auto;
+                            box-shadow: none;
+                            border: none;
+                        }
+
+                        .mobilemenu li.hasSubmenu>a:after {
+                            content: '+';
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            display: block;
+                            font-size: 1.5em;
+                            padding: 0 .5em;
+                        }
+                    }
+                </style> -->
+                <!-- MOBILE MENU -->
+                <nav id="mobilemenu" class="collapse navbar-collapse mobilemenu" role="navigation">
+                    <div class="mainCallToAction">
+                        <a href="volunteer.html" class="cta-button" tabindex="0"><span
+                                class="post_link">Volunteer</span></a>
+                        <a href="donation.html" class="cta-button cta-donate" tabindex="-1"><span
+                                class="post_link">Donate</span></a>
+                    </div>
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item active pb-3">
+                            <a href="index.html" class="nav-link">Home <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item pb-3 dropdown">
+
+                            <a href="#" class="nav-link dropdown-toggle" id="dropprograms" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="active">About</span></a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropprograms">
+                                <li><a class="dropdown-item" href="about.html">Who We Are</a></li>
+                                <li><a class="dropdown-item" href="about.html">What We Do</a></li>
+                                <li><a class="dropdown-item" href="about.html">Our Mission</a></li>
+                                <li><a class="dropdown-item" href="about.html">Meet Our Team </a></li>
+                                <li><a class="dropdown-item" href="">Completed Projects</a></li>
+                                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item pb-3 dropdown">
+
+                            <a href="#" class="nav-link dropdown-toggle" id="dropprograms" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="active">Programs</span></a>
 
 
-                            <li class="menuAdminLogin"><a href="/login?ReturnURL=%2f"
-                                    title="Log in to contribute or update your details" role="menuitem" rel="nofollow"
-                                    tabindex="-1">Log in</a></li>
+                            <ul class="dropdown-menu" aria-labelledby="dropprograms">
+                                <li><a class="dropdown-item" href="programs.html">ATN STEM</a></li>
+                                <li><a class="dropdown-item" href="programs.html">Codigen</a></li>
+                                <li><a class="dropdown-item" href="programs.html">Codigen School Club</a></li>
+                                <li><a class="dropdown-item" href="programs.html">Codigen BootCamp</a></li>
+                                <li><a class="dropdown-item" href="programs.html">Codigen Hackathon</a></li>
+                                <li><a class="dropdown-item" href="programs.html">ATN Foundation Award</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item pb-3">
+                            <a href="partners.html" class="nav-link">Partners</span></a>
+                        </li>
+
+                        <li class="nav-item pb-3 dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="dropmenu" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Get Involved</span></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropmenu">
+                                <li><a class="dropdown-item" href="volunteer.html">Volunteer as an instructor</a></li>
+                                <li><a class="dropdown-item" href="join-out-team.html">Join our Team</a></li>
+                                <li><a class="dropdown-item" href="donation.html">Donate to support an African Child
+                                        Tech
+                                        Initiative</a></li>
+                                <li><a class="dropdown-item" href="partners.html">Become a Partner</a></li>
+                                <li><a class="dropdown-item" href="volunteer.html">Volunteer your Hub</a></li>
+                                <li><a class="dropdown-item" href="contribute.html">Contribute to Open Source Project
+                                        Initiative</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-item pb-3">
+                            <a href="news.html" class="nav-link">News</span></a>
+                        </li>
+                        <li class="nav-item pb-3">
+                            <a href="contact.html" class="nav-link">Contact</span></a>
+                        </li>
+                    </ul>
+
+                    <!-- <div class="top-menu">
+                        <li class="search">
+                            <form id="search" class="header-search " action="/pages/search.aspx" method="get">
+                                <fieldset class="searchContainer" role="search">
+                                    <label for="siteSearch" class="siteSearch">Search</label>
+                                    <input type="search" title="Search" id="siteSearch" placeholder="Search" name="q">
+                                    <button type="submit" tabindex=""
+                                        onclick="submitSearch('6LdTro0UAAAAAGeif0XCJ6-XT4hER5N3RQpS9Z2u')">Search</button>
+                                </fieldset>
+                            </form>
+                        </li>
+                    </div> -->
+                    <!-- <style>
+                        .socialIcons {
+                            display: block;
+                            padding: 0 1.5rem;
+                            border: none;
+                        }
+
+                        .socialIcons li {
+                            display: inline-block !important;
+                            width: 40px !important;
+                            margin-right: 5px;
+                            color: #fff;
+                        }
+
+                        .socialIcons li a {
+                            width: 40px !important;
+                            height: 40px;
+                            padding: 0;
+                            border-bottom: 0;
+                            position: relative;
+                            display: block !important;
+                            overflow: hidden;
+                            font-size: inherit;
+                            background-color: #ff671f;
+
+                        }
+
+                        .socialIcons li a span {
+                            color: #fff;
+                        }
+                    </style> -->
+                    <ul class="socialIcons mceNonEditable">
+                        <li><a href="https://www.facebook.com/" tabindex="-1"><span class="fab fa-facebook"></span></a>
+                        </li>
+                        <li><a href="https://twitter.com/" tabindex="-1"><span class="fab fa-twitter"></span></a></li>
+                    </ul>
+                </nav>
+            </header>
+
+        </main>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 
 
+        <script>
+            // const menu = document.getElementById('mobilemenubtn');
+            // const menumain = document.getElementById('mobilemenu');
 
-                        </ul>
-                    </li>
+            // menu.addEventListener('click', function () {
+            //     if (menumain.classList.contains('collapse-active')) {
+            //         menumain.classList.remove('collapse-active')
+            //     } else {
+            //         menumain.classList.add('collapse-active')
+            //     }
 
-                    <li class="menuAdminBasket menuAdminAltItems"><a href="/checkout" title="View your basket"
-                            tabindex="-1"><span>Basket: </span><span class="basket-summary">(0 items)</span></a></li>
-                </ul>
-                <form class="header-search " action="/pages/search.aspx" method="get">
-                    <fieldset class="searchContainer" role="search">
-                        <label for="siteSearch" class="siteSearch">Search</label>
-                        <input type="search" title="Search" id="siteSearch" placeholder="Search" name="q">
-                        <button type="submit" tabindex=""
-                            onclick="submitSearch('6LdTro0UAAAAAGeif0XCJ6-XT4hER5N3RQpS9Z2u')">Search</button>
-                    </fieldset>
-                </form>
-                <ul class="socialIcons mceNonEditable">
-                    <li><a href="https://www.facebook.com/HIVScotland" class="mceEditable" tabindex="-1">Facebook</a>
-                    </li>
-                    <li><a href="https://twitter.com/HIVScotland" class="mceEditable" tabindex="-1">Twitter</a></li>
-                </ul>
-            </nav>
-        </header>
-
-    </main>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-    <script>
-        const menu = document.getElementById('mobilemenubtn');
-        const menumain = document.getElementById('mobilemenu');
-
-        menu.addEventListener('click', function () {
-            if (menumain.classList.contains('collapse-active')) {
-                menumain.classList.remove('collapse-active')
-            } else {
-                menumain.classList.add('collapse-active')
-            }
-
-        })
-    </script>
-</body>
+            // })
+        </script>
+    </body>

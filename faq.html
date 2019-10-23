@@ -8,7 +8,7 @@
     <title>ATN Foundation</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/donation.css">
+    <link rel="stylesheet" href="/css/nav.css">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
 
@@ -16,95 +16,271 @@
 
 <body>
     <main>
-        <section id="header" class="mb-5">
-            <!-- NAV -->
-            <nav class="navbar navbar-b navbar-expand-md nav-block fixed-top bg-light navbar-light navbar-tans ">
+        <header>
+            <section id="header">
+                <div class="top-menu">
+                    <div class="container-fluid text-center topheader">
+                        <ul class="container">
+                            <li><a href="#">Sign Up</a></li>
+                            <li><a href="#">Login</a></li>
+                            <li class="search">
+                                <form class="header-search" action="">
+                                    <fieldset>
 
-                <div class="container">
-                    <a href="#" class="navbar-brand logo">
-                        <img src="images/weblogo.png" style="width:100%;" alt="Logo" srcset="">
-                    </a>
+                                        <div class="input-group">
+                                            <input type="text" id="search" class="form-control" placeholder="Search">
+                                            <div class="input-group-append">
+                                                <button type="submit" style="font-size: 1.5rem;"
+                                                    class="btn btn-outline-secondary"><i class="fa fa-search"
+                                                        aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
 
-                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-                        data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
-                        <ul class="navbar-nav m-auto my-nav">
-                            <li class="nav-item active p-3">
-                                <a href="index.html" class="nav-link">Home <span class="sr-only">(current)</span></a>
+                                </form>
                             </li>
-                            <li class="nav-item p-3 dropdown">
-                                <!-- <span href="about.html" class="nav-link">About</span></a> -->
-
-                                <a href="#" class="nav-link dropdown-toggle" id="dropprograms" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">About</span></a>
-                                <div class="dropdown-menu" aria-labelledby="dropprograms">
-                                    <a class="dropdown-item" href="about.html">Who We Are</a>
-                                    <a class="dropdown-item" href="about.html">What We Do</a>
-                                    <a class="dropdown-item" href="about.html">Our Mission</a>
-                                    <a class="dropdown-item" href="about.html">Meet Our Team </a>
-                                    <a class="dropdown-item" href="">Completed Projects</a>
-                                    <a class="dropdown-item" href="faq.html">FAQ</a>
-                                </div>
-                            </li>
-                            <li class="nav-item p-3 dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" id="dropprograms" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">Programs</span></a>
-
-
-                                <div class="dropdown-menu" aria-labelledby="dropprograms">
-                                    <a class="dropdown-item" href="programs.html">ATN STEM</a>
-                                    <a class="dropdown-item" href="programs.html">Codigen</a>
-                                    <a class="dropdown-item" href="programs.html">Codigen School Club</a>
-                                    <a class="dropdown-item" href="programs.html">Codigen BootCamp</a>
-                                    <a class="dropdown-item" href="programs.html">Codigen Hackathon</a>
-                                    <a class="dropdown-item" href="programs.html">ATN Foundation Award</a>
-                                </div>
-                            </li>
-
-                            <li class="nav-item p-3">
-                                <a href="partners.html" class="nav-link">Partners</span></a>
-                            </li>
-
-                            <li class="nav-item p-3 dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" id="dropmenu" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">Get Involved</span></a>
-                                <div class="dropdown-menu" aria-labelledby="dropmenu">
-                                    <a class="dropdown-item" href="volunteer.html">Volunteer as an instructor</a>
-                                    <a class="dropdown-item" href="join-out-team.html">Join our Team</a>
-                                    <a class="dropdown-item" href="donation.html">Donate to support an African Child
-                                        Tech
-                                        Initiative</a>
-                                    <a class="dropdown-item" href="partners.html">Become a Partner</a>
-                                    <a class="dropdown-item" href="volunteer.html">Volunteer your Hub</a>
-                                    <a class="dropdown-item" href="contribute.html">Contribute to Open Source Project
-                                        Initiative</a>
-                                </div>
-
-                            </li>
-                            <li class="nav-item p-3">
-                                <a href="news.html" class="nav-link">News</span></a>
-                            </li>
-                            <li class="nav-item p-3">
-                                <a href="contact.html" class="nav-link">Contact</span></a>
-                            </li>
+                            <ul>
+                                <li style="padding: 0px 10px; font-size: 2rem;"><span class="fab fa-facebook-f"></span>
+                                </li>
+                                <li style="padding: 0px 10px; font-size: 2rem;"><span class="fab fa-twitter"></span>
+                                </li>
+                            </ul>
                         </ul>
-
-                        <div class="donate_menu my-2 my-lg-0">
-                            <a href="donation.html" class="btn btn-warning btn-sm donate-btn">Donate now</a>
-                            <!-- </d> -->
-                            <a href="join-out-team.html" class="hiring" style="color:red; text-decoration:underline">We
-                                are
-                                hiring!</span></a>
-                        </div>
                     </div>
 
+                    <div class="mobile">
+                        <div class="row">
+                            <div class="m-3">
+                                <a href="#">
+                                    <img src="images/logo.png" class="img-fluid mainlogo " alt="Atn Foundation"
+                                        srcset="">
+                                </a>
+                            </div>
+                            <div class="mobile-tag">
+                                <div class="menu-btn">
+                                    <a class="menuMainAlt navbar-toggle" id="mobilemenubtn" href="#menu"
+                                        data-toggle="collapse" data-target="#mobilemenu" aria-controls="mobilemenu"
+                                        aria-expanded="false" aria-label="Toggle navigation">Menu</a>
+                                    <button class="donate_menu donate"><span>Donate</span></button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="container desktop" style="width:100%; margin:0 auto;">
+                        <div class="row align-items-center">
+                            <div class="col-md-2">
+                                <a href="#">
+                                    <img src="images/logo.png" class="img-fluid mainlogo " alt="Atn Foundation"
+                                        srcset="">
+                                </a>
+                            </div>
+                            <div class="col-md-10 col-lg-10 col-xs-10 main-tagline">
+                                <div class="box-tagline">
+
+                                    <p class="tagline">
+                                        <span>
+                                            Can you help make <span style="color: #ed5939;">positive change</span>
+                                            happen?
+                                        </span>
+
+                                    </p>
+                                    <div class="menu-btn">
+                                        <button class="donate_menu"><span>Volunteer</span></button>
+                                        <button class="donate_menu donate"><span>Donate</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- </div> -->
+                    <div class="container-fluid" id="menu-bar">
+                        <!-- <div class="container"> -->
+                        <nav class="navbar navbar-expand-lg mainmenu">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                                <ul class="navbar-nav">
+
+                                    <li class="nav-item active p-3">
+                                        <a href="index.html" class="nav-link">Home <span
+                                                class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item p-3 dropdown hasSubmenu">
+                                        <!-- <span href="about.html" class="nav-link">About</span></a> -->
+
+                                        <a href="#" class="nav-link dropdown-toggle" id="dropprograms"
+                                            data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">About</span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dropprograms">
+                                            <a class="dropdown-item" href="about.html">Who We Are</a>
+                                            <a class="dropdown-item" href="about.html">What We Do</a>
+                                            <a class="dropdown-item" href="about.html">Our Mission</a>
+                                            <a class="dropdown-item" href="about.html">Meet Our Team </a>
+                                            <a class="dropdown-item" href="">Completed Projects</a>
+                                            <a class="dropdown-item" href="faq.html">FAQ</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item p-3 dropdown hasSubmenu">
+                                        <a href="#" class="nav-link dropdown-toggle" id="dropprograms"
+                                            data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">Programs</span></a>
+
+
+                                        <div class="dropdown-menu" aria-labelledby="dropprograms">
+                                            <a class="dropdown-item" href="programs.html">ATN STEM</a>
+                                            <a class="dropdown-item" href="programs.html">Codigen</a>
+                                            <a class="dropdown-item" href="programs.html">Codigen School Club</a>
+                                            <a class="dropdown-item" href="programs.html">Codigen BootCamp</a>
+                                            <a class="dropdown-item" href="programs.html">Codigen Hackathon</a>
+                                            <a class="dropdown-item" href="programs.html">ATN Foundation Award</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item p-3">
+                                        <a href="partners.html" class="nav-link">Partners</span></a>
+                                    </li>
+
+                                    <li class="nav-item p-3 dropdown hasSubmenu">
+                                        <a href="#" class="nav-link dropdown-toggle" id="dropmenu"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Get
+                                            Involved</span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dropmenu">
+                                            <a class="dropdown-item" href="volunteer.html">Volunteer as an
+                                                instructor</a>
+                                            <a class="dropdown-item" href="join-out-team.html">Join our Team</a>
+                                            <a class="dropdown-item" href="donation.html">Donate to support an
+                                                African
+                                                Child
+                                                Tech
+                                                Initiative</a>
+                                            <a class="dropdown-item" href="partners.html">Become a Partner</a>
+                                            <a class="dropdown-item" href="volunteer.html">Volunteer your Hub</a>
+                                            <a class="dropdown-item" href="contribute.html">Contribute to Open
+                                                Source
+                                                Project
+                                                Initiative</a>
+                                        </div>
+
+                                    </li>
+                                    <li class="nav-item p-3">
+                                        <a href="news.html" class="nav-link">News</span></a>
+                                    </li>
+                                    <li class="nav-item p-3">
+                                        <a href="contact.html" class="nav-link">Contact</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
-            </nav>
-        </section>
+
+                <nav id="mobilemenu" class="collapse navbar-collapse mobilemenu" role="navigation">
+                    <div class="mainCallToAction">
+                        <a href="volunteer.html" class="cta-button" tabindex="0"><span
+                                class="post_link">Volunteer</span></a>
+                        <a href="donation.html" class="cta-button cta-donate" tabindex="-1"><span
+                                class="post_link">Donate</span></a>
+                    </div>
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item active pb-3">
+                            <a href="index.html" class="nav-link">Home <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item pb-3 dropdown">
+
+                            <a href="#" class="nav-link dropdown-toggle" id="dropprograms" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="active">About</span></a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropprograms">
+                                <li><a class="dropdown-item" href="about.html">Who We Are</a></li>
+                                <li><a class="dropdown-item" href="about.html">What We Do</a></li>
+                                <li><a class="dropdown-item" href="about.html">Our Mission</a></li>
+                                <li><a class="dropdown-item" href="about.html">Meet Our Team </a></li>
+                                <li><a class="dropdown-item" href="">Completed Projects</a></li>
+                                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item pb-3 dropdown">
+
+                            <a href="#" class="nav-link dropdown-toggle" id="dropprograms" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="active">Programs</span></a>
+
+
+                            <ul class="dropdown-menu" aria-labelledby="dropprograms">
+                                <li><a class="dropdown-item" href="programs.html">ATN STEM</a></li>
+                                <li><a class="dropdown-item" href="programs.html">Codigen</a></li>
+                                <li><a class="dropdown-item" href="programs.html">Codigen School Club</a></li>
+                                <li><a class="dropdown-item" href="programs.html">Codigen BootCamp</a></li>
+                                <li><a class="dropdown-item" href="programs.html">Codigen Hackathon</a></li>
+                                <li><a class="dropdown-item" href="programs.html">ATN Foundation Award</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item pb-3">
+                            <a href="partners.html" class="nav-link">Partners</span></a>
+                        </li>
+
+                        <li class="nav-item pb-3 dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="dropmenu" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Get Involved</span></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropmenu">
+                                <li><a class="dropdown-item" href="volunteer.html">Volunteer as an instructor</a>
+                                </li>
+                                <li><a class="dropdown-item" href="join-out-team.html">Join our Team</a></li>
+                                <li><a class="dropdown-item" href="donation.html">Donate to support an African Child
+                                        Tech
+                                        Initiative</a></li>
+                                <li><a class="dropdown-item" href="partners.html">Become a Partner</a></li>
+                                <li><a class="dropdown-item" href="volunteer.html">Volunteer your Hub</a></li>
+                                <li><a class="dropdown-item" href="contribute.html">Contribute to Open Source
+                                        Project
+                                        Initiative</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-item pb-3">
+                            <a href="news.html" class="nav-link">News</span></a>
+                        </li>
+                        <li class="nav-item pb-3">
+                            <a href="contact.html" class="nav-link">Contact</span></a>
+                        </li>
+                    </ul>
+
+                    <!-- <div class="top-menu">
+                                                                <li class="search">
+                                                                    <form id="search" class="header-search " action="/pages/search.aspx" method="get">
+                                                                        <fieldset class="searchContainer" role="search">
+                                                                            <label for="siteSearch" class="siteSearch">Search</label>
+                                                                            <input type="search" title="Search" id="siteSearch" placeholder="Search" name="q">
+                                                                            <button type="submit" tabindex=""
+                                                                                onclick="submitSearch('6LdTro0UAAAAAGeif0XCJ6-XT4hER5N3RQpS9Z2u')">Search</button>
+                                                                        </fieldset>
+                                                                    </form>
+                                                                </li>
+                                                            </div> -->
+                    <ul class="socialIcons mceNonEditable">
+                        <li><a href="https://www.facebook.com/" tabindex="-1"><span class="fab fa-facebook"></span></a>
+                        </li>
+                        <li><a href="https://twitter.com/" tabindex="-1"><span class="fab fa-twitter"></span></a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </section>
+        </header>
         <br />
         <br />
 
@@ -205,14 +381,17 @@
                                     data-parent="#accordionExample">
                                     <div class="card-body">
                                         <p class="mt-4">
-                                            AfriTechNovative is a term coined from three words, Africa, technology and
+                                            AfriTechNovative is a term coined from three words, Africa, technology
+                                            and
                                             innovation.
-                                            The foundation is aimed at developing and improving technology in Africa by
+                                            The foundation is aimed at developing and improving technology in Africa
+                                            by
                                             timely
                                             creating a tech-friendly environment for primary and secondary school
                                             students
                                             and
-                                            arming them with the necessary knowledge and skill-set required to compete
+                                            arming them with the necessary knowledge and skill-set required to
+                                            compete
                                             favourably in
                                             an ever-evolving environment.
                                         </p>
@@ -240,7 +419,8 @@
                                             NGO means non-governmental organization. It is also a non-profit
                                             organization
                                             working
-                                            with or without government efforts to provide social and economic services
+                                            with or without government efforts to provide social and economic
+                                            services
                                             for
                                             humanity.
                                         </p>
@@ -288,7 +468,8 @@
                                     data-parent="#accordionExample">
                                     <div class="card-body">
                                         <p class="mt-4">
-                                            No. But we look forward to partnering with the government and other private
+                                            No. But we look forward to partnering with the government and other
+                                            private
                                             organizations in other to achieve a common good for humanity.
                                         </p>
                                     </div>
@@ -316,7 +497,8 @@
                                             The halo effect is a term in psychology that describes a tendency to
                                             favourably
                                             judge
-                                            people, companies, groups, products etc, based on their perceived image of
+                                            people, companies, groups, products etc, based on their perceived image
+                                            of
                                             morality or
                                             some other positive factor.
                                             In the context of NGOs, groups that claim to promote values seen as
@@ -326,15 +508,18 @@
                                             credible
                                             and
                                             constructive forces immune from investigations and criticism.
-                                            This cognitive bias is seen in the way in which factual and legal statement
+                                            This cognitive bias is seen in the way in which factual and legal
+                                            statement
                                             by
-                                            politicized NGOs that claim to represent human rights are routinely accepted
+                                            politicized NGOs that claim to represent human rights are routinely
+                                            accepted
                                             at
                                             face
                                             value and without further questions by journalists, diplomats and other
                                             opinion
                                             leaders.
-                                            This effect shields NGO’s from the independent analysis and scrutiny that
+                                            This effect shields NGO’s from the independent analysis and scrutiny
+                                            that
                                             are
                                             directed
                                             toward other political actors

@@ -4,9 +4,7 @@
     }
 
 body {
-    /* color: transparent; */
-    /* color: #ff671f; */
-    font-size: 12px;
+    font-size: 16px;
     font-family: "Century Gothic", Sans-serif !important;
 }
 
@@ -17,34 +15,9 @@ html {
 
 /* NAV */
 
-#navbarContent ul li {
-    text-transform: uppercase;
-
-}
 
 #header {
     position: relative;
-}
-
-#header .bg-light {
-    background: #ffffff !important;
-    /* padding: 1em !important */
-}
-
-nav {
-    position: relative;
-    /* padding: 0 5px !important */
-}
-
-.navbar-light.scrolled {
-    transition: all 0.5s ease-in-out;
-    background: #fff;
-    box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
-}
-
-.my-nav {
-    font-size: 1.2rem;
-    font-weight: bold
 }
 
 .donate-btn {
@@ -71,27 +44,6 @@ nav {
     background: #EE3123;
 }
 
-.donate_menu .hiring {
-    display: inline-block;
-    font-family: maison-neue, sans-serif;
-    font-weight: 700;
-    line-height: 1.5;
-    background: #E6E6E6;
-    color: #300D4F;
-    position: absolute;
-    right: 17px;
-    padding: 5px;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    font-size: 12px;
-    line-height: 16px;
-    border-radius: 2px;
-    -webkit-letter-spacing: 1px;
-    -moz-letter-spacing: 1px;
-    -ms-letter-spacing: 1px;
-    letter-spacing: 1px;
-    top: 0.7%;
-}
 
 a{
     text-decoration: none !important;
@@ -109,10 +61,7 @@ a{
     background: url("../images/banner_4.jpg");
 }
 
-.logo {
-    float: left;
-    max-width: 150px;
-}
+
 
 
 .slider .summary {
